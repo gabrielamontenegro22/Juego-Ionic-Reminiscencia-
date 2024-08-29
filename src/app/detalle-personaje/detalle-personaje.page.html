@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles de {{ personaje.nombre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col  size-md="4" offset-md="4" >
+        <ion-card>
+          <ion-img [src]="personaje.imagen"></ion-img>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating" >Fuerza</ion-label>
+              <ion-input [(ngModel)]="personaje.fuerza" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" >Velocidad</ion-label>
+              <ion-input [(ngModel)]="personaje.velocidad" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" >Inteligencia</ion-label>
+              <ion-input [(ngModel)]="personaje.inteligencia" type="number"></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" (click)="guardarCambios()">Guardar Cambios</ion-button>
+</ion-content>
