@@ -1,0 +1,25 @@
+<h1>Buscar personajes de Rick and Morty</h1>
+<button (click)="onSubmit()">Buscar Personajes</button>
+
+<div class="container" *ngIf="characters.length > 0">
+  <div *ngFor="let character of characters; let i = index" class="card">
+    <img [src]="character.image" alt="{{ character.name }}">
+    <h3>{{ character.name }}</h3>
+    <p>{{ character.species }}</p>
+    <button (click)="onDelete(i)">Eliminar</button>
+  </div>
+</div>
+
+<div class="botones">
+  <h2>Agregar Nuevo Personaje</h2>
+  <input type="text" placeholder="Nombre" [(ngModel)]="newCharacter.name" />
+  <input type="text" placeholder="Categoría" [(ngModel)]="newCharacter.category" />
+  <input type="file" (change)="onFileChange($event)" />
+  <button (click)="onAddCharacter()">Agregar Personaje</button>
+  
+  <!-- Vista previa de la imagen -->
+  <div *ngIf="previewImage" class="image-preview">
+    <h3>Vista Previa:</h3>
+    <img [src]="previewImage" alt="Preview Image" />
+  </div>
+</div>

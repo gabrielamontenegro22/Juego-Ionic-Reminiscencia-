@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'componente',
     pathMatch: 'full'
   },
   {
@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'foto',
     loadChildren: () => import('./foto/foto.module').then( m => m.FotoPageModule)
-  },  {
+  },
+  {
     path: 'juego',
     loadChildren: () => import('./juego/juego.module').then( m => m.JuegoPageModule)
   },
@@ -33,6 +34,18 @@ const routes: Routes = [
   {
     path: 'detalle-personaje',
     loadChildren: () => import('./detalle-personaje/detalle-personaje.module').then( m => m.DetallePersonajePageModule)
+  },
+  {
+    path: 'botonesm',
+    loadChildren: () => import('./directivas/botonesm/botonesm.module').then( m => m.BotonesmPageModule)
+  },
+  {
+    path: 'componente',
+    loadChildren: () => import('./carpeta/componente/componente.module').then( m => m.ComponentePageModule)
+  },
+  {
+    path: 'casa1',
+    loadChildren: () => import('./casa1/casa1.module').then( m => m.Casa1PageModule)
   },
 
 ];

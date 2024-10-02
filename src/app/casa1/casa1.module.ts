@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FotoPageRoutingModule } from './foto-routing.module';
+import { Casa1PageRoutingModule } from './casa1-routing.module';
 
-import { FotoPage } from './foto.page';
+import { Casa1Page } from './casa1.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FotoPageRoutingModule,
-    CommonModule, FormsModule
+    Casa1PageRoutingModule
   ],
-  declarations: [FotoPage]
+  declarations: [Casa1Page]
 })
-export class FotoPageModule {}
+export class Casa1PageModule {}

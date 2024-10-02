@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FotoPageRoutingModule } from './foto-routing.module';
+import { BotonesmPageRoutingModule } from './botonesm-routing.module';
 
-import { FotoPage } from './foto.page';
+import { BotonesmPage } from './botonesm.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FotoPageRoutingModule,
+    BotonesmPageRoutingModule,
     CommonModule, FormsModule
   ],
-  declarations: [FotoPage]
+  declarations: [BotonesmPage]
 })
-export class FotoPageModule {}
+export class BotonesmPageModule { }

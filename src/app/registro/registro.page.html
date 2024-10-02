@@ -17,6 +17,7 @@
           </ion-card-header>
       
           <ion-card-content>
+            <!--formulario de registro de usuario-->
             <form [formGroup]="formularioRegistro" >
               <ion-item>
                 <ion-label position="floating" > Nombre</ion-label>
@@ -34,7 +35,8 @@
               </ion-item>
             </form>
             <br>
-      
+            
+            <!--dispara un alert indicando que el usuario se registro-->
             <ion-button (click)="guardar()" >
               Ingresar
             </ion-button>
