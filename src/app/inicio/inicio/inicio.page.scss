@@ -1,0 +1,80 @@
+.menu-container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+}
+
+ion-content.custom-content {
+  --background: none;
+  background-image: url('/assets/Inicio de Sesion 1 (1).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.animated-image img {
+  width: 600px; /* Ajusta el tamaño de la imagen */
+  animation: move 5s infinite alternate ease-in-out; /* Animación funcional */
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px); /* Mueve la imagen 20px hacia la derecha */
+  }
+}
+
+.menu-buttons {
+  position: fixed;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 3.5%;
+  background-image: url("/assets/contenedorBtnInicio.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.play-button, .register-button {
+  --background: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  width: 200px;
+}
+
+.play-button {
+  background-image: url("/assets/btnJugar.png");
+}
+
+.register-button {
+  background-image: url("/assets/btnRegistrar.png");
+}
+
+.social-icons {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+ion-icon {
+  font-size: 24px;
+  color: white;
+}

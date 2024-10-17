@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'componente',
+    redirectTo: 'registro',
     pathMatch: 'full'
   },
   {
@@ -36,17 +36,27 @@ const routes: Routes = [
     loadChildren: () => import('./detalle-personaje/detalle-personaje.module').then( m => m.DetallePersonajePageModule)
   },
   {
-    path: 'botonesm',
-    loadChildren: () => import('./directivas/botonesm/botonesm.module').then( m => m.BotonesmPageModule)
-  },
-  {
     path: 'componente',
     loadChildren: () => import('./carpeta/componente/componente.module').then( m => m.ComponentePageModule)
   },
   {
-    path: 'casa1',
-    loadChildren: () => import('./casa1/casa1.module').then( m => m.Casa1PageModule)
+    path: 'card',
+    loadChildren: () => import('./cards/card/card.module').then( m => m.CardPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+
+
 
 ];
 

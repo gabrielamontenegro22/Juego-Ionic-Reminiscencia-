@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BotonesmPageRoutingModule } from './botonesm-routing.module';
+import { MenuPageRoutingModule } from './menu-routing.module';
 
-import { BotonesmPage } from './botonesm.page';
+import { MenuPage } from './menu.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BotonesmPageRoutingModule,
-    CommonModule, FormsModule
+    MenuPageRoutingModule
   ],
-  declarations: [BotonesmPage]
+  declarations: [MenuPage]
 })
-export class BotonesmPageModule { }
+export class MenuPageModule {}

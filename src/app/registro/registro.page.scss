@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+ion-content {
+  --background: none;
+  background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url('/assets/Decoracion.png');
+  background-position: center;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+/* Estilo para los campos de entrada */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #e7e7d7; /* Color de fondo */
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid black; /* Bordes negros */
+  box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+.input-icon img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Estilo personalizado para ion-input */
+ion-input {
+  --background: none; /* Elimina el color de fondo predeterminado */
+  --color: #333; /* Color de texto */
+  --padding-start: 10px;
+  font-size: 18px;
+  width: 100%;
+  font-family: 'Metal Mania', cursive;
+  background: none; /* Asegura que no haya fondo oscuro */
+  color: #333; /* Color del texto */
+  border: none;
+  outline: none;
+}
+
+/* Estilo del botón de registro */
+.login-button {
+  background-color: #e7e7d7;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 15px 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Metal Mania', cursive;
+}
+
+.login-button:hover {
+  background-color: #443e3ea2;
+  color: #fff;
+}
+
+.login-button:active {
+  background-color: #313431;
+}

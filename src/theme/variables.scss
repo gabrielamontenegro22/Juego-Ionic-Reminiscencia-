@@ -1,2 +1,13 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+// src/theme/variables.scss
+
+:root {
+    --ion-color-primary: #670f0f;  // Cambiar color principal
+    --ion-color-secondary: #0cd1e8; // Cambiar color secundario
+    --ion-button-background: #222; // Cambiar color de fondo del botón
+    --ion-button-color: #fff; // Cambiar color del texto del botón
+    --ion-border-radius: 8px; // Cambiar el radio de borde de los componentes
+    --ion-padding-horizontal: 16px; // Cambiar el padding horizontal
+  }
+  
