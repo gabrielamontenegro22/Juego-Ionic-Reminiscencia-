@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
-
 ion-content {
-  --background: none; /* Elimina cualquier color de fondo predeterminado */
+  --background: none;
   background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
-  background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
-  background-position: center; /* Centra la imagen en la pantalla */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 20px; /* Añadir espacio inferior */
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
+  padding-bottom: 20px;
 }
 
 /* Contenedor principal del login */
@@ -19,9 +18,9 @@ ion-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 100%;
   padding: 20px;
-  background-image: url('/assets/Decoracion.png'); /* Fondo dentro del contenedor */
+  background-image: url('/assets/Decoracion.png');
   background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
@@ -37,9 +36,8 @@ ion-content {
 }
 
 .game-title img {
-  
   height: auto;
-  width: 150px; /* Ajuste del tamaño de la imagen */
+  width: 150px;
 }
 
 /* Estilos para los campos de entrada */
@@ -52,7 +50,7 @@ ion-content {
   margin-bottom: 20px;
   width: 80%;
   max-width: 400px;
-  border: 2px solid black; /* Bordes negros */
+  border: 2px solid black;
   box-shadow: 0px 5px 15px rgb(0, 0, 0);
 }
 
@@ -76,17 +74,18 @@ input[type="text"], input[type="password"] {
 
 /* Estilo del botón de login */
 .login-button {
-  background-color: #e7e7d7;
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid black; /* Bordes negros */
-  padding: 15px 50px;
-  border-radius: 30px;
-  margin-top: 20px;
-  cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Metal Mania', cursive; /* Fuente Metal Mania */
+  background-color: #e7e7d7 !important;
+  color: #333 !important;
+  font-size: 16px !important; /* Reducir el tamaño de la fuente */
+  font-weight: bold !important;
+  border: 2px solid black !important;
+  padding: 10px 30px !important; /* Reducir el padding del botón */
+  border-radius: 20px !important; /* Mantener el borde redondeado */
+  margin-top: 15px !important; /* Ajustar el espacio superior */
+  cursor: pointer !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+  font-family: 'Metal Mania', cursive !important;
+  width: 180px !important; /* Reducir el ancho del botón */
 }
 
 .login-button:hover {
@@ -110,15 +109,15 @@ input[type="text"], input[type="password"] {
 
 /* Estilos de los botones de Olvidaste tu contraseña y Registrar */
 .link {
-  background-color: #e7e7d7;
-  color: #333;
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 2px solid black; /* Bordes negros */
-  text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Metal Mania', cursive;
+  background-color: #e7e7d7 !important;
+  color: #333 !important;
+  font-size: 12px !important; /* Reducir el tamaño de la fuente */
+  padding: 5px 15px !important; /* Reducir el tamaño del padding */
+  border-radius: 15px !important; /* Ajustar el borde redondeado */
+  border: 2px solid black !important;
+  text-decoration: none !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+  font-family: 'Metal Mania', cursive !important;
 }
 
 .link:hover {
