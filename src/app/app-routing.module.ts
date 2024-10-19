@@ -20,28 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'foto',
-    loadChildren: () => import('./foto/foto.module').then( m => m.FotoPageModule)
-  },
-  {
-    path: 'juego',
-    loadChildren: () => import('./juego/juego.module').then( m => m.JuegoPageModule)
-  },
-  {
-    path: 'juego-verdadero',
-    loadChildren: () => import('./juego-verdadero/juego-verdadero.module').then( m => m.JuegoVerdaderoPageModule)
-  },
-  {
-    path: 'detalle-personaje',
-    loadChildren: () => import('./detalle-personaje/detalle-personaje.module').then( m => m.DetallePersonajePageModule)
-  },
-  {
     path: 'componente',
     loadChildren: () => import('./carpeta/componente/componente.module').then( m => m.ComponentePageModule)
-  },
-  {
-    path: 'card',
-    loadChildren: () => import('./cards/card/card.module').then( m => m.CardPageModule)
   },
   {
     path: 'inicio',
