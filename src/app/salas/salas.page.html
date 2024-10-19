@@ -1,0 +1,34 @@
+<ion-content fullscreen>
+  <div class="main-container">
+    <!-- Sección Izquierda (Master y Volver) -->
+    <div class="left-section">
+      <div class="master-button">
+        <img src="assets/Group 4.png" alt="Master Icon">
+        <ion-button expand="block">Master</ion-button>
+      </div>
+      <ion-button routerLink="/elige-rol" expand="block" color="light">Volver</ion-button>
+    </div>
+
+    <!-- Sección Central (Salas Disponibles) -->
+    <div class="center-section">
+      <h2>Salas Disponibles</h2>
+      <div class="room" *ngFor="let room of rooms">
+        <div class="room-details">
+          <p>{{ room.name }}</p>
+          <p>Id: {{ room.id }}</p>
+        </div>
+      </div>
+      <ion-button expand="block" color="primary">Crear Sala</ion-button>
+      <ion-button expand="block" color="danger">Eliminar Sala</ion-button>
+    </div>
+
+    <!-- Sección Derecha (Jugadores en Línea) -->
+    <div class="right-section">
+      <h2>Jugadores en Línea</h2>
+      <div class="player" *ngFor="let player of players">
+        <img src="assets/profile-photo.png" alt="Player Icon">
+        <p>{{ player.name }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

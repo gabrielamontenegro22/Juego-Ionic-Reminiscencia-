@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'loign-quemado',
+    redirectTo: 'salas',
     pathMatch: 'full'
   },
   {
@@ -39,6 +39,11 @@ const routes: Routes = [
     path: 'elige-rol',
     loadChildren: () => import('./elige-rol/elige-rol.module').then( m => m.EligeRolPageModule)
   },
+  {
+    path: 'salas',
+    loadChildren: () => import('./salas/salas.module').then( m => m.SalasPageModule)
+  },
+
 ];
 
 @NgModule({

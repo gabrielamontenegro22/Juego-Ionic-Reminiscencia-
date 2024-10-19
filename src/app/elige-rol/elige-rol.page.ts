@@ -12,7 +12,7 @@ export class EligeRolPage {
 
   selectRole(role: string) {
     if (role === 'master') {
-      this.router.navigate(['/registro']);
+      this.router.navigate(['/salas']);
     } else if (role === 'jugador') {
       this.router.navigate(['/jugador-dashboard']);
     }
