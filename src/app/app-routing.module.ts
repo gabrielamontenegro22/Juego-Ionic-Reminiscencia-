@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'salas',
     loadChildren: () => import('./salas/salas.module').then( m => m.SalasPageModule)
+  },  {
+    path: 'captura-foto',
+    loadChildren: () => import('./captura-foto/captura-foto.module').then( m => m.CapturaFotoPageModule)
   },
+
 
 ];
 

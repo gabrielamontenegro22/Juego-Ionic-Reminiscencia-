@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Captura tu foto de perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="camera-container">
+    <!-- Muestra la imagen de perfil actual si está disponible -->
+    <img *ngIf="profileImage" [src]="profileImage" class="profile-pic" alt="Imagen de Perfil"/>
+
+    <!-- Botón para capturar una nueva imagen -->
+    <ion-button expand="block" (click)="capturePhoto()">Tomar Foto</ion-button>
+
+    <!-- Video en vivo desde la cámara -->
+    <div>
+      <video id="video" autoplay></video>
+    </div>
+
+    <!-- Canvas para procesar la imagen (oculto) -->
+    <canvas id="canvas" style="display:none;"></canvas>
+    
+    <!-- Mensaje cuando no se ha tomado ninguna foto -->
+    <p *ngIf="!profileImage">No has tomado una foto aún.</p>
+  </div>
+</ion-content>
