@@ -1,126 +1,132 @@
-ion-content {
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ion-content.custom-content {
   --background: none;
-  background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
-  background-size: 100% 100%;
+  background-image: url('/assets/Inicio de Sesion 1 (1).png'); 
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh; /* Asegura que ocupe toda la pantalla */
-  padding-bottom: 20px;
+  overflow: hidden;
 }
 
-/* Contenedor principal del login */
+
 .login-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 20px;
   background-image: url('/assets/Decoracion.png');
   background-position: center;
-  background-size: 35%;
+  background-size: 55% 90%;
   background-repeat: no-repeat;
-  margin: auto;
-}
-
-/* Imagen del título del juego */
-.game-title {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: -120px;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 70px;
 }
 
-.game-title img {
-  height: auto;
-  width: 150px;
-}
-
-/* Estilos para los campos de entrada */
 .input-group {
   display: flex;
   align-items: center;
-  background-color: #e7e7d7;
-  border-radius: 30px;
-  padding: 15px;
-  margin-bottom: 20px;
-  width: 80%;
-  max-width: 400px;
-  border: 2px solid black;
-  box-shadow: 0px 5px 15px rgb(0, 0, 0);
+  margin-bottom: 10px;
+  color: #00000018;
+  background-color: #F6FBDB; 
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 40%;
+  border: 3px solid #000000; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Iconos dentro de los campos */
-.input-icon img {
-  width: 24px;
-  height: 24px;
+.input-icon {
   margin-right: 10px;
 }
 
-/* Estilos para los inputs */
-input[type="text"], input[type="password"] {
+.input-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+input {
   border: none;
   outline: none;
   background: none;
-  font-size: 18px;
-  width: 100%;
-  color: #333;
   font-family: 'Metal Mania', cursive;
+  font-size: 20px;
+  color: #000000; 
+  flex-grow: 1;
+  text-align: center;
 }
 
-/* Estilo del botón de login */
 .login-button {
-  background-color: #e7e7d7 !important;
-  color: #333 !important;
-  font-size: 16px !important; /* Reducir el tamaño de la fuente */
-  font-weight: bold !important;
-  border: 2px solid black !important;
-  padding: 10px 30px !important; /* Reducir el padding del botón */
-  border-radius: 20px !important; /* Mantener el borde redondeado */
-  margin-top: 15px !important; /* Ajustar el espacio superior */
-  cursor: pointer !important;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
-  font-family: 'Metal Mania', cursive !important;
-  width: 180px !important; /* Reducir el ancho del botón */
+  
+  
+  color: #5C5C5C;
+  //border: 3px solid #000000;
+  border-radius: 35px;
+  padding: 2%;
+  font-family: 'Metal Mania', cursive;
+  font-size: 18px;
+  cursor: pointer;
+  width: 20%;
+  margin: 1% 0 3% 0;
+  text-align: center;
+  //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  background: none;
+  //background-color: #F6FBDB;
+  background-image: url('/assets/background-btns.png');
+  background-size: 80% 80%;
+  background-position:center;
+  background-repeat: no-repeat;
 }
 
 .login-button:hover {
-  background-color: #443e3ea2;
-  color: #fff;
-  font-weight: normal;
+  //background-color: #5C5C5C;
+  color: white; 
 }
 
-.login-button:active {
-  background-color: #313431;
-}
-
-/* Enlaces en la parte inferior */
 .bottom-links {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
-  max-width: 400px;
-  margin-top: 20px;
+  justify-content:space-between;
+  width: 40%;
+
 }
 
-/* Estilos de los botones de Olvidaste tu contraseña y Registrar */
 .link {
-  background-color: #e7e7d7 !important;
-  color: #333 !important;
-  font-size: 12px !important; /* Reducir el tamaño de la fuente */
-  padding: 5px 15px !important; /* Reducir el tamaño del padding */
-  border-radius: 15px !important; /* Ajustar el borde redondeado */
-  border: 2px solid black !important;
-  text-decoration: none !important;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
-  font-family: 'Metal Mania', cursive !important;
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Metal Mania', cursive;
+  font-size: 14px;
+  background-color: #F6FBDB; 
+  padding: 2px 15px;
+  border-radius: 15px; 
+  border: 2px solid #000000; 
+  transition: background-color 0.3s ease; 
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0px); /* Inicia a la derecha */
+  }
+  100% {
+    transform: translateX(-10px); /* Termina a la izquierda */
+  }
 }
 
-.link:hover {
-  background-color: #171414a2;
-  color: #fff;
+.game-title {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  text-align: center;
+  animation: slide 2s ease-in-out infinite alternate; 
 }
+
+.game-title img {
+  width: 120px;
+  height: 73px;
+}
+
