@@ -12,13 +12,7 @@ ion-content {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 20px; /* Añadir espacio inferior */
-=======
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
->>>>>>> DarwinMora
-}
+
 
 ion-content.custom-content {
   --background: none;
@@ -138,9 +132,9 @@ input {
   text-align: center;
   animation: slide 2s ease-in-out infinite alternate; 
 }
+}
 
 .game-title img {
   width: 120px;
   height: 73px;
 }
-
