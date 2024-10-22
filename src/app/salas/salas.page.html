@@ -2,11 +2,11 @@
   <div class="main-container">
     <!-- Sección Izquierda (Master y Volver) -->
     <div class="left-section">
-      <div class="master-button">
-        <img src="assets/Group 4.png" alt="Master Icon">
-        <ion-button expand="block">Master</ion-button>
+      <div class="master-container">
+        <img src="assets/Group 4.png" alt="Master Icon" class="master-icon">
+        <ion-button expand="block" color="light" class="master-btn">Master</ion-button>
       </div>
-      <ion-button routerLink="/elige-rol" expand="block" color="light">Volver</ion-button>
+      <ion-button routerLink="/elige-rol" expand="block" color="light" class="volver-btn">Volver</ion-button>
     </div>
 
     <!-- Sección Central (Salas Disponibles) -->
@@ -18,15 +18,15 @@
           <p>Id: {{ room.id }}</p>
         </div>
       </div>
-      <ion-button expand="block" color="primary">Crear Sala</ion-button>
-      <ion-button expand="block" color="danger">Eliminar Sala</ion-button>
+      <ion-button expand="block" color="primary" class="crear-sala-btn">Crear Sala</ion-button>
+      <ion-button expand="block" color="danger" class="eliminar-sala-btn">Eliminar Sala</ion-button>
     </div>
 
     <!-- Sección Derecha (Jugadores en Línea) -->
     <div class="right-section">
       <h2>Jugadores en Línea</h2>
       <div class="player" *ngFor="let player of players">
-        <img src="assets/profile-photo.png" alt="Player Icon">
+        <img src="assets/profile-photo.png" alt="Player Icon" class="player-icon">
         <p>{{ player.name }}</p>
       </div>
     </div>
