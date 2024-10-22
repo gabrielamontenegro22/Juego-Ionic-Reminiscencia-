@@ -1,6 +1,7 @@
 .background-container {
-  background-image: url('/assets/fondo.png');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/fondo.png');
   background-size: cover;
+  background-position: center;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -13,26 +14,26 @@
   justify-content: space-around;
   width: 80%;
 }
+
 .role-card {
   text-align: center;
-  background-image: url('/assets/personajes/contenedorBtnInicio.png'); /* Añadir imagen de fondo */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la tarjeta */
-  background-position: center; /* Centrar la imagen */
+  background-image: url('/assets/personajes/contenedorBtnInicio.png');
+  background-size: cover;
+  background-position: center;
   color: white;
-  border: 2px solid #717171;
+  border: 2px solid #5a5a5a;
   width: 180px;
   height: 250px;
 }
 
-
 .role-card img {
-  width: 120px; /* Aumentamos el tamaño de las imágenes */
+  width: 120px;
   height: 120px;
 }
 
 ion-card-title {
   font-family: 'MedievalSharp', cursive;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #ffcc00;
   margin-top: 10px;
 }
