@@ -1,13 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content class="custom-content" [fullscreen]="true">
   <div class="login-container">
     <div class="input-group">
       <div class="input-icon">
@@ -23,7 +14,7 @@
       <input type="password" placeholder="Contraseña">
     </div>
 
-    <button class="login-button">Iniciar Sesion</button>
+    <button class="login-button" routerLink="/elige-rol">Iniciar Sesión</button>
 
     <div class="bottom-links">
       <a href="#" class="link">¿Olvidaste tu contraseña?</a>
@@ -35,13 +26,4 @@
   <div class="game-title">
     <img src="/assets/Titulo_Juego1.png" alt="Título del Juego">
   </div>
-
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button class="custom-buttom" [routerLink]="['/registro']">Registrarse</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>

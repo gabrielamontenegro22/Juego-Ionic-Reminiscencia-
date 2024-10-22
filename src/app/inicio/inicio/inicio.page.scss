@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+
 .menu-container {
   position: relative;
   text-align: center;
 }
 
 .background-image {
-  margin-top: 2%;
+  margin-top: 1%;
   width: 50%;
   height: auto;
 }
@@ -20,51 +23,60 @@ ion-content.custom-content {
 }
 
 .animated-image img {
-  width: 600px; /* Ajusta el tamaño de la imagen */
-  animation: move 5s infinite alternate ease-in-out; /* Animación funcional */
+  width: 400px; /* Ajusta el tamaño de la imagen */
+  animation: move 3.5s infinite alternate ease-in-out;
+  position: relative;
+  z-index: 2; /* Asegura que la imagen quede por encima del recuadro morado */
 }
 
 @keyframes move {
   0% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(20px); /* Mueve la imagen 20px hacia la derecha */
+    transform: translateX(-20px);
   }
 }
 
 .menu-buttons {
   position: fixed;
-  bottom: -38px;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  padding: 1%;
   flex-direction: column;
-  gap: 20px;
-  padding: 3.5%;
   background-image: url("/assets/contenedorBtnInicio.png");
-  background-size: contain;
-  background-position: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  z-index: 1; 
 }
 
 .play-button, .register-button {
   --background: none;
-  background-size: cover;
-  background-position: center;
+  --box-shadow: none;
+  background-size: 90% 90%;
+  background-position:center;
   background-repeat: no-repeat;
-  padding: 10px;
-  width: 200px;
+  color: #5C5C5C;
+  border-radius: 50px;
+  font-family: 'Metal Mania', cursive;
+  margin-top: 5%;
+  font-size: 22px;
 }
 
 .play-button {
-  background-image: url("/assets/btnJugar.png");
+
+  background-image: url("/assets/background-btns.png");
+  background-size: 100%;
 }
 
 .register-button {
-  background-image: url("/assets/btnRegistrar.png");
+  background-image: url("/assets/background-btns.png");
+  background-size: 100%;
+
 }
+
 
 .social-icons {
   position: fixed;

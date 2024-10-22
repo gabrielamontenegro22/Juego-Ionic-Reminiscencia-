@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FotoPageRoutingModule } from './foto-routing.module';
+import { CapturaFotoPageRoutingModule } from './captura-foto-routing.module';
 
-import { FotoPage } from './foto.page';
+import { CapturaFotoPage } from './captura-foto.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FotoPageRoutingModule,
-    CommonModule, FormsModule
+    CapturaFotoPageRoutingModule
   ],
-  declarations: [FotoPage]
+  declarations: [CapturaFotoPage]
 })
-export class FotoPageModule {}
+export class CapturaFotoPageModule {}
