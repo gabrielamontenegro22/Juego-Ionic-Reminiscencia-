@@ -20,8 +20,10 @@ ion-content.custom-content {
 }
 
 .animated-image img {
-  width: 600px; /* Ajusta el tamaño de la imagen */
-  animation: move 5s infinite alternate ease-in-out; /* Animación funcional */
+  width: 400px; /* Ajusta el tamaño de la imagen */
+  animation: move 5s infinite alternate ease-in-out;
+  position: relative;
+  z-index: 2; /* Asegura que la imagen quede por encima del recuadro morado */
 }
 
 @keyframes move {
@@ -35,27 +37,32 @@ ion-content.custom-content {
 
 .menu-buttons {
   position: fixed;
-  bottom: -38px;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 3.5%;
+  padding: 2%; /* Reducir padding */
   background-image: url("/assets/contenedorBtnInicio.png");
-  background-size: contain;
+  background-size: 90% 100%; /* Reducir el tamaño del recuadro morado */
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  z-index: 1; /* Asegura que esté debajo de la imagen animada */
 }
 
 .play-button, .register-button {
   --background: none;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 10px;
-  width: 200px;
+  width: 180px; /* Reducir el ancho de los botones */
+  height: 50px; /* Mantener una proporción adecuada */
+  font-size: 16px; /* Reducir un poco el tamaño de la fuente */
+  --background-activated: rgba(255, 255, 255, 0); /* Cambia el fondo a gris cuando el botón se presiona */
+  --background-focused: rgba(255, 255, 255, 0);   /* Cambia el fondo a gris cuando el botón está enfocado */
+  --background-hover: none;     /* Desactiva el cambio de color al pasar el ratón */
+  --background-pressed: none;   /* Desactiva el cambio de color al presionar */
 }
 
 .play-button {
@@ -64,6 +71,18 @@ ion-content.custom-content {
 
 .register-button {
   background-image: url("/assets/btnRegistrar.png");
+}
+
+
+/* Cambiar el color de fondo a gris al hacer clic en los botones */
+.play-button:active, .register-button:active {
+  background-color: grey; /* Cambia el color a gris cuando se hace clic */
+  background-image: none; /* Opcional */
+}
+
+/* Elimina el borde azul de enfoque cuando se hace clic */
+.play-button:focus, .register-button:focus {
+  outline: none;
 }
 
 .social-icons {
