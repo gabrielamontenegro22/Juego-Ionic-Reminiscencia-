@@ -1,0 +1,99 @@
+.container-fluid {
+  width: 100%;
+}
+.attributes-container {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+
+  .attribute-row {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .attribute-label {
+      width: 20%;
+      background-color: #4a4a8a;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .attribute-controls {
+      width: 80%;
+      display: flex;
+      align-items: center;
+
+      .control {
+        display: flex;
+        align-items: center;
+        width: 20%;
+
+        ion-button {
+          margin: 0 5px;
+          --background: #4a4a8a;
+          color: #ffffff;
+          --border-radius: 50%;
+          --padding-start: 0;
+          --padding-end: 0;
+        }
+
+        input {
+          width: 50px;
+          text-align: center;
+          border: none;
+          background: #ffffff;
+          color: #000;
+          font-weight: bold;
+          border-radius: 5px;
+          margin: 0 5px;
+        }
+      }
+
+      ion-range {
+        width: 80%;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  height: 100vh;
+  margin: 20px 10px; /* Espaciado vertical y horizontal */
+}
+
+.master-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.master-button img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+ion-button {
+  width: 100%;
+}
