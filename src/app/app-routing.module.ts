@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'barra-vida',
     loadChildren: () => import('./barra-vida/barra-vida.module').then( m => m.BarraVidaPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
 
 
 
