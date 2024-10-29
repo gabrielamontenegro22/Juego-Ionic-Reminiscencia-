@@ -1,10 +1,10 @@
 ion-content {
-  --background: none;
+  --background: none; /* Elimina cualquier color de fondo predeterminado */
   background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
+  background-position: center; /* Centra la imagen en la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

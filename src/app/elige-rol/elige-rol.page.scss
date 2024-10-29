@@ -1,5 +1,5 @@
 .background-container {
-  background-image: url('/assets/Inicio de Sesion 1 (1).png');
+  background-image: url('/assets/fondo.png');
   background-size: cover;
   height: 100%;
   display: flex;
@@ -19,7 +19,7 @@
   background-size: cover; /* Ajusta la imagen para cubrir toda la tarjeta */
   background-position: center; /* Centrar la imagen */
   color: white;
-  border: 2px solid #ffcc00;
+  border: 2px solid #717171;
   width: 180px;
   height: 250px;
 }
@@ -32,7 +32,7 @@
 
 ion-card-title {
   font-family: 'MedievalSharp', cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #ffcc00;
   margin-top: 10px;
 }
