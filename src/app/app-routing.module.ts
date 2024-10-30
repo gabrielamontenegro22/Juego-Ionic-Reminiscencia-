@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'info-personaje',
+    redirectTo: 'ajuste',
     pathMatch: 'full'
   },
   {
@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'info-personaje',
     loadChildren: () => import('./info-personaje/info-personaje.module').then( m => m.InfoPersonajePageModule)
-  },  {
+  },
+  {
     path: 'prueba',
     loadChildren: () => import('./prueba/prueba.module').then( m => m.PruebaPageModule)
   },
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'ajuste',
+    loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
   },
 
 

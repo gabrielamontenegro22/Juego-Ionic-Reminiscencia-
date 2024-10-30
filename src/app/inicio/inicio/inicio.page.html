@@ -1,7 +1,7 @@
 <ion-content fullscreen class="custom-content">
   <ion-grid>
     <!-- Contenedor del menú -->
-    <ion-row class="ion-justify-content-center ion-align-items-center menu-container">
+    <ion-row class=" menu-container">
       <ion-col size="12" class="ion-text-center">
         <!-- Imagen animada -->
         <div class="animated-image">
@@ -11,17 +11,18 @@
     </ion-row>
 
     <!-- Botones del menú -->
-    <ion-row class="ion-justify-content-center ion-align-items-center menu-buttons">
-      <ion-col size="12" class="ion-text-center">
-        <ion-button routerLink="/login" expand="block" class="play-button"></ion-button>
+    <ion-row class="menu-buttons">
+      
+      <ion-col size="12">
+        <ion-button routerLink="/login" expand="block" class="play-button">Jugar</ion-button>
       </ion-col>
-      <ion-col size="12" class="ion-text-center">
-        <ion-button routerLink="/registro" expand="block" class="register-button"></ion-button>
+      <ion-col size="12">
+        <ion-button routerLink="/registro" expand="block" class="register-button">Registro</ion-button>
       </ion-col>
     </ion-row>
 
     <!-- Iconos sociales -->
-    <ion-row class="ion-justify-content-center ion-align-items-center social-icons">
+    <ion-row class="social-icons">
       <ion-col size="auto">
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-col>
