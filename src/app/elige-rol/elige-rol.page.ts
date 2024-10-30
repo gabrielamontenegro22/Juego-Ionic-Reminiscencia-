@@ -14,7 +14,7 @@ export class EligeRolPage {
     if (role === 'master') {
       this.router.navigate(['/salas']);
     } else if (role === 'jugador') {
-      this.router.navigate(['/jugador-dashboard']);
+      this.router.navigate(['/inicio']);
     }
   }
 }
