@@ -15,7 +15,7 @@ ion-content {
 
 ion-content.custom-content {
   --background: none;
-  background-image: url('/assets/Inicio de Sesion 1 (1).png'); 
+  background-image: url('/assets/fondo.png'); 
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -106,7 +106,8 @@ input {
   text-decoration: none;
   font-family: 'Metal Mania', cursive;
   font-size: 14px;
-  background-color: #F6FBDB; 
+  //background-color: #F6FBDB; 
+  background-image: url(/src/assets/facebook.png);
   padding: 2px 15px;
   border-radius: 15px; 
   border: 2px solid #000000; 
@@ -134,3 +135,4 @@ input {
   width: 120px;
   height: 73px;
 }
+

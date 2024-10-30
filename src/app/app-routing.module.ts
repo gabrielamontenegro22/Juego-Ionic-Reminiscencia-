@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+<<<<<<< HEAD
     redirectTo: 'ajuste',
+=======
+    redirectTo: 'registro',
+>>>>>>> 3474ed9 (Terminacion de registro y actualizacion de fondos de las vistas)
     pathMatch: 'full'
   },
   {

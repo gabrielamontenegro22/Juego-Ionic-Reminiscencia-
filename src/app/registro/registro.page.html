@@ -1,32 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <div>
-    <div>
-      <div>
-        <img src="/assets/image 7.png" alt="User Icon">
+<ion-content class="custom-content" [fullscreen]="true">
+  <div class="login-container">
+    <div class="input-group">
+      <div class="input-icon">
+        <img src="/assets/correoRegist.png" alt="User Icon">
       </div>
-      <ion-item>
-        <ion-input formControlName="nombre" placeholder="Usuario"></ion-input>
-      </ion-item>
+      <input type="text" placeholder="Correo o numero">
     </div>
 
-    <div>
-      <div>
-        <img src="/assets/image 6.png" alt="Password Icon">
+    <div class="input-group">
+      <div class="input-icon">
+        <img src="/assets/psswdRegist.png" alt="Password Icon">
       </div>
-      <ion-item>
-        <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
-      </ion-item>
+      <input type="password" placeholder="Crear Contraseña">
     </div>
 
-    <ion-button>Registrar</ion-button>
+    <button class="login-button" routerLink="/elige-rol">Crear cuenta</button>
+
+    <div >
+      <div class="bottom-links">
+        
+        <a href="https://facebook.com" class="link">
+          <img src="/assets/facebook.png" alt="">
+        </a>
+        <a href="https://google.com" class="link">
+          <img src="/assets/google.png" alt="">
+        </a>
+        <a href="https://play.google.com/googleplaygames?hl=es_CO" class="link">
+          <img src="/assets/playgames.png" alt="">
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Imagen del título del juego en la parte inferior -->
+  <div class="game-title">
+    <img src="/assets/Titulo_Juego1.png" alt="Título del Juego">
   </div>
 </ion-content>
