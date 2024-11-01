@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
+.back-btn{
+  position: absolute;
+  padding: 20px;
+  background: none;
+}
+
 ion-content {
   --background: none; /* Elimina cualquier color de fondo predeterminado */
   background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
