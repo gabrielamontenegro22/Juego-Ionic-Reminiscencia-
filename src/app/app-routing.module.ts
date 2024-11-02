@@ -58,15 +58,7 @@ const routes: Routes = [
   {
     path: 'ajuste',
     loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
-  },  {
-    path: 'carrousel',
-    loadChildren: () => import('./carrousel/carrousel.module').then( m => m.CarrouselPageModule)
-  },
-  {
-    path: 'grid',
-    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
-  },
-
+  }
 
 
 

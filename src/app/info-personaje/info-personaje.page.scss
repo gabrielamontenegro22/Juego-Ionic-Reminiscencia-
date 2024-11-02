@@ -1,53 +1,88 @@
- ion-content {
-  --background: none;   
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+ion-content {
+  --background: none;
   background-image: url('/assets/fondo.png');
-  background-size: 100% 100%;  
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 20px;
+  
 }
-/* 
-.row {
-  display: flex;
-  justify-content: space-around;
-  width: 20%;
-} 
 
- */
+.fondito {
 
+  background-color: rgba(78, 80, 109, 0.78);
+}
 
+.col-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
 
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
 
+.master-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.master-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
 
+.master-img, .volver-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
+.line {
+    position: absolute;
+    right: 0;
+    width: 6.5px;
+}
 
-
-/* .container-fluid {
-  width: 100%;
+.volver-img {
+    margin-top: 180px;
 }
 
 .attributes-container {
-  padding: 10px;
-  background-color: rgba(241, 241, 241, 0.9); 
-  border-radius: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
 }
 
-.attribute-row {
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-  border-bottom: 1px solid #ccc;
+.attributes-container .attribute-row {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
 
-  &:last-child {
+.attributes-container .attribute-row:last-child {
     border-bottom: none;
-  }
+}
 
-  .attribute-label {
+.attributes-container .attribute-label {
     width: 20%;
     background-color: #4a4a8a;
     color: #ffffff;
@@ -55,79 +90,117 @@
     padding: 5px;
     text-align: center;
     border-radius: 5px;
-  }
+}
 
-  .attribute-controls {
+.attributes-container .attribute-controls {
     width: 80%;
     display: flex;
     align-items: center;
-
-    .control {
-      display: flex;
-      align-items: center;
-      width: 20%;
-
-      ion-button {
-        margin: 0 5px;
-        --background: #4a4a8a;
-        color: #ffffff;
-        --border-radius: 50%;
-        --padding-start: 0;
-        --padding-end: 0;
-      }
-
-      input {
-        width: 50px;
-        text-align: center;
-        border: none;
-        background: #ffffff;
-        color: #000;
-        font-weight: bold;
-        border-radius: 5px;
-        margin: 0 5px;
-      }
-    }
-
-    ion-range {
-      width: 80%;
-      margin: 0 10px;
-    }
-  }
 }
 
-.row {
-  display: flex;
-  justify-content: space-around;
-}
-.center-image{
-  width: 20%;
-}
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); 
-  padding: 20px;
-  border-radius: 15px;
-  height: 100vh;
-  margin: 20px 10px;
+.attributes-container .control {
+    display: flex;
+    align-items: center;
+    width: 20%;
 }
 
-.master-button {
+.attributes-container .btn-atribute {
+    margin: 0 5px;
+    --background: #4a4a8a;
+    color: #ffffff;
+    --border-radius: 50%;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+.attributes-container input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    background: #ffffff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.attributes-container ion-range {
+    width: 80%;
+    margin: 0 10px;
+}
+
+
+
+/*    Lista de amigos     */
+
+.friends-list-container {
+  padding: 5px;
+  background-color: #4a4a8a;
+  border: groove 5px;
+  color: #ffffff; 
+  
+}
+
+.title-list-friend {
   text-align: center;
-  margin-top: 20px;
+  font-family: 'Metal Mania', cursive;
+  font-size: medium;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ion-list {
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: transparent;
 }
 
-.master-button img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 10px;
+.friend-item {
+  display: flex;
+  align-items: center;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-ion-button {
-  width: 100%;
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- */
 
+.profile img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
 
+.friend-info {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.friend-name {
+  font-weight: bold;
+  margin: 0;
+  color: #000000;
+}
+
+.friend-level {
+  color: #555555;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-list-friend {
+  --padding-start: 0;
+  --padding-end: 0;
+  margin: 0 5px;
+}
+
+.icon-list-friend {
+  font-size: 1.2em;
+}
