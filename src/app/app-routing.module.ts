@@ -52,19 +52,12 @@ const routes: Routes = [
     loadChildren: () => import('./barra-vida/barra-vida.module').then( m => m.BarraVidaPageModule)
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
     path: 'ajuste',
     loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
-  },  {
-    path: 'carrousel',
-    loadChildren: () => import('./carrousel/carrousel.module').then( m => m.CarrouselPageModule)
   },
   {
-    path: 'grid',
-    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+    path: 'student-crud',
+    loadChildren: () => import('./student-crud/student-crud.module').then( m => m.StudentCrudPageModule)
   },
 
 

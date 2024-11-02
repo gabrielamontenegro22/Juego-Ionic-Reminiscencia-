@@ -1,0 +1,18 @@
+<h2>CRUD de Estudiantes</h2>
+
+<form (ngSubmit)="editMode ? updateStudent() : addStudent()">
+  <input type="text" [(ngModel)]="student.name" name="name" placeholder="Nombre" required />
+  <input type="email" [(ngModel)]="student.email" name="email" placeholder="Correo" required />
+  <input type="text" [(ngModel)]="student.phone" name="phone" placeholder="Teléfono" required />
+  <input type="text" [(ngModel)]="student.language" name="language" placeholder="Idioma" required />
+  <button type="submit">{{ editMode ? 'Actualizar' : 'Agregar' }}</button>
+  <button type="button" (click)="resetForm()" *ngIf="editMode">Cancelar</button>
+</form>
+
+<ul>
+  <li *ngFor="let student of students">
+    {{ student.name }} - {{ student.email }}
+    <button (click)="selectStudent(student)">Editar</button>
+    <button (click)="deleteStudent(student.id)">Eliminar</button>
+  </li>
+</ul>
