@@ -1,20 +1,117 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <ion-content>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <div class="container-fluid">
-    <div class="row text-center">
-      <!-- Primera Sección (Master y Volver) -->
-      <div class="col section">
-        <div class="master-button">
-          <img src="assets/Group 4.png" alt="Master Icon">
-          <ion-button expand="block">Master</ion-button>
+  <div class="row">
+    <div class="col-3">
+      <div class="master-button">
+        <img src="assets/Group 4.png" alt="Master Icon">
+        <ion-button expand="block">Jugador</ion-button>
+      </div>
+      <ion-button expand="block" color="primary">Siguiente</ion-button>
+      <ion-button routerLink="/elige-rol" expand="block">Volver</ion-button>
+      
+    </div>
+  
+    <div class="col-9">
+      
+      <div class="row">
+        <div class="col">
+          aaaa
         </div>
-        <ion-button routerLink="/elige-rol" expand="block" color="light">Volver</ion-button>
+        <div class="col">
+          bbb
+        </div>
+        <div class="col">
+          ccc
+        </div>
       </div>
 
-      <!-- Segunda Sección (Otra Opción) -->
-      <div class="col section">
+
+      <div class="row">
+        <div class="col">
+          ggg
+        </div>
+        <div class="col">
+          
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+  
+    
+    </div>
+  </div>
+  <!-- <app-prueba2></app-prueba2> -->
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 section left-column">
+        <div class="master-button">
+          <img src="assets/Group 4.png" alt="Master Icon">
+          <ion-button expand="block">Jugador</ion-button>
+        </div>
+        <ion-button expand="block" color="primary">Siguiente</ion-button>
+        <ion-button routerLink="/elige-rol" expand="block">Volver</ion-button>
+        
+      </div>
+
+      <div class="header">
+        <h2>Nombre Jugador</h2>
+        <div class="level">
+          <span>Nivel 0</span>
+          <ion-icon name="caret-up-outline"></ion-icon>
+        </div>
+      </div>
+
+
+
+
+      <div class="col-8 section player-section">
+        <div class="player-info-container">
+          <div class="header">
+            <h2>Nombre Jugador</h2>
+            <div class="level">
+              <span>Nivel 0</span>
+              <ion-icon name="caret-up-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Vida</div>
+            <ion-progress-bar value="0.8" color="success"></ion-progress-bar>
+            <div class="stat-end">
+              <span>HP</span>
+              <ion-icon name="water-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Mana</div>
+            <ion-progress-bar value="0.6" color="primary"></ion-progress-bar>
+            <div class="stat-end">
+              <span>MP</span>
+              <ion-icon name="planet-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Equip</div>
+            <ion-progress-bar value="0.5" color="warning"></ion-progress-bar>
+            <div class="stat-end">
+              <span>DPT</span>
+              <ion-icon name="hammer-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+         Imagen del jugador en el centro 
+        <div class="center-image">
+          <img src="assets/personajes/personaje1.png" alt="Imagen del Jugador" />
+        </div>
+
+         Atributos del jugador 
         <div class="attributes-container">
           <div class="attribute-row" *ngFor="let attribute of attributes">
             <div class="attribute-label">
@@ -32,14 +129,30 @@
         </div>
       </div>
 
-      <!-- Tercera Sección (Otra opción adicional) -->
-      <div class="col section">
-        <div class="master-button">
-          <img src="assets/Group 4.png" alt="Another Icon">
-          <ion-button expand="block">Otra Opción</ion-button>
-        </div>
-        <ion-button routerLink="/elige-rol" expand="block" color="light">Volver</ion-button>
+      Columna Derecha: Lista de Amigos
+      <div class="col-2 section friends-list-container">
+        <h3>Lista de Amigos</h3>
+        <ion-list>
+          <ion-item *ngFor="let friend of friends" lines="none" class="friend-item">
+            <div class="profile">
+              <img src="assets/personajes/image.webp" alt="Friend Icon" />
+            </div>
+            <div class="friend-info">
+              <p class="friend-name">{{ friend.name }}</p>
+              <p class="friend-level">Nivel {{ friend.level }}</p>
+            </div>
+            <div class="actions">
+              <ion-button fill="clear" color="success" (click)="sendMessage(friend)">
+                <ion-icon name="mail-outline"></ion-icon>
+              </ion-button>
+              <ion-button fill="clear" color="danger" (click)="removeFriend(friend)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-item>
+        </ion-list>
       </div>
-    </div>
-  </div>
+    </div> 
+  </div> 
 </ion-content>
+ -->
