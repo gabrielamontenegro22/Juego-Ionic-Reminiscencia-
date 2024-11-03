@@ -138,7 +138,6 @@ ion-content {
   background-color: #4a4a8a;
   border: groove 5px;
   color: #ffffff; 
-  
 }
 
 .title-list-friend {
@@ -147,20 +146,50 @@ ion-content {
   font-size: medium;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 0;
 }
 ion-list {
-  max-height: 150px;
+  max-height: 100px;
   overflow-y: auto;
-  background-color: transparent;
+  background-color: red;
+  padding: 5px;
+
+}
+.b{
+  background-color: aqua;
+}
+.aa{
+  background-color: blueviolet;
+}
+.c{
+  background-color: chartreuse;
+  border-radius: 40px;
 }
 
 .friend-item {
+  
   display: flex;
   align-items: center;
-  background-color: #d3d3d3;
-  border-radius: 5px;
-  padding: 5px;
+  --margin: 5px;
+  --padding: 0px;
 }
+
+.profile,
+.friend-info,
+.actions {
+  display: flex;
+  align-items: center;
+}
+.btn-list-friend {
+  --padding-start: 0;
+  --padding-end: 0;
+  margin: 0;
+  font-size: 15px;
+  
+}
+
+/* 
+
 
 .profile {
   display: flex;
@@ -170,37 +199,19 @@ ion-list {
 
 .profile img {
   width: 50%;
-  height: 50%;
   border-radius: 50%;
   border: 2px solid #000;
 }
 
-.friend-info {
-  flex: 1;
-  padding-left: 10px;
-}
-
-.friend-name {
-  font-weight: bold;
-  margin: 0;
-  color: #000000;
-}
 
 .friend-level {
   color: #555555;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-}
 
-.btn-list-friend {
-  --padding-start: 0;
-  --padding-end: 0;
-  margin: 0 5px;
-}
+
+
 
 .icon-list-friend {
   font-size: 1.2em;
-}
+} */
