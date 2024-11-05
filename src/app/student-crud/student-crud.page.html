@@ -1,18 +1,33 @@
-<h2>CRUD de Estudiantes</h2>
+<div class="student-form">
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nombre:</label>
+    <input id="name" formControlName="name" type="text" />
 
-<form (ngSubmit)="editMode ? updateStudent() : addStudent()">
-  <input type="text" [(ngModel)]="student.name" name="name" placeholder="Nombre" required />
-  <input type="email" [(ngModel)]="student.email" name="email" placeholder="Correo" required />
-  <input type="text" [(ngModel)]="student.phone" name="phone" placeholder="Teléfono" required />
-  <input type="text" [(ngModel)]="student.language" name="language" placeholder="Idioma" required />
-  <button type="submit">{{ editMode ? 'Actualizar' : 'Agregar' }}</button>
-  <button type="button" (click)="resetForm()" *ngIf="editMode">Cancelar</button>
-</form>
+    <label for="email">Correo electrónico:</label>
+    <input id="email" formControlName="email" type="email" />
 
-<ul>
-  <li *ngFor="let student of students">
-    {{ student.name }} - {{ student.email }}
-    <button (click)="selectStudent(student)">Editar</button>
-    <button (click)="deleteStudent(student.id)">Eliminar</button>
-  </li>
-</ul>
+    <label for="phone">Teléfono:</label>
+    <input id="phone" formControlName="phone" type="text" />
+
+    <label for="language">Idioma:</label>
+    <select id="language" formControlName="language">
+      <option value="master">master</option>
+      <option value="player">player</option>
+      
+    </select>
+
+    <button type="submit">{{ isEditing ? 'Actualizar' : 'Registrar' }}</button>
+    <button type="button" (click)="resetForm()" *ngIf="isEditing">Cancelar</button>
+  </form>
+</div>
+
+<div class="student-list">
+  <h3>Lista de estudiantes</h3>
+  <ul>
+    <li *ngFor="let student of students">
+      <p>{{ student.name }} - {{ student.email }} - {{ student.phone }} - {{ student.language }}</p>
+      <button (click)="editStudent(student)">Editar</button>
+      <button (click)="deleteStudent(student.id)">Eliminar</button>
+    </li>
+  </ul>
+</div>

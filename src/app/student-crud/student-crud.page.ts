@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../servicios/student.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-student-crud',
   templateUrl: './student-crud.page.html',
@@ -8,53 +10,62 @@ import { StudentService } from '../servicios/student.service';
 export class StudentCrudPage implements OnInit {
 
   students: any[] = [];
-  student = { name: '', email: '', phone: '', language: '' };
-  editMode = false;
-  selectedStudentId: number | null = null;
+  studentForm: FormGroup;
+  isEditing = false;
+  currentStudentId: number | null = null;
 
-  constructor(private studentService: StudentService) {}
-
-  ngOnInit(): void {
-    this.loadStudents();
+  constructor(private studentService: StudentService, private fb: FormBuilder) {
+    this.studentForm = this.fb.group({
+      name: ['', [Validators.required, Validators.maxLength(255)]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      language: ['', [Validators.required]]
+    });
   }
 
-  loadStudents() {
+  ngOnInit(): void {
+    this.getStudents();
+  }
+
+  getStudents(): void {
     this.studentService.getStudents().subscribe((response) => {
       this.students = response.students;
     });
   }
 
-  addStudent() {
-    this.studentService.createStudent(this.student).subscribe(() => {
-      this.loadStudents();
-      this.resetForm();
-    });
-  }
+  onSubmit(): void {
+    if (this.studentForm.invalid) return;
 
-  selectStudent(student: any) {
-    this.editMode = true;
-    this.selectedStudentId = student.id;
-    this.student = { ...student };
-  }
+    const studentData = this.studentForm.value;
 
-  updateStudent() {
-    if (this.selectedStudentId) {
-      this.studentService.updateStudent(this.selectedStudentId, this.student).subscribe(() => {
-        this.loadStudents();
+    if (this.isEditing && this.currentStudentId) {
+      this.studentService.updateStudent(this.currentStudentId, studentData).subscribe(() => {
+        this.getStudents();
+        this.resetForm();
+      });
+    } else {
+      this.studentService.createStudent(studentData).subscribe(() => {
+        this.getStudents();
         this.resetForm();
       });
     }
   }
 
-  deleteStudent(id: number) {
+  editStudent(student: any): void {
+    this.isEditing = true;
+    this.currentStudentId = student.id;
+    this.studentForm.patchValue(student);
+  }
+
+  deleteStudent(id: number): void {
     this.studentService.deleteStudent(id).subscribe(() => {
-      this.loadStudents();
+      this.getStudents();
     });
   }
 
-  resetForm() {
-    this.student = { name: '', email: '', phone: '', language: '' };
-    this.editMode = false;
-    this.selectedStudentId = null;
+  resetForm(): void {
+    this.studentForm.reset();
+    this.isEditing = false;
+    this.currentStudentId = null;
   }
 }

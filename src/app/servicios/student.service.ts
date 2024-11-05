@@ -29,4 +29,8 @@ export class StudentService {
   deleteStudent(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
+
+  login(credentials: { email: string, phone: string }): Observable<any> {
+    return this.http.post<any>(this.apiUrl, credentials);
+  }
 }

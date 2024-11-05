@@ -8,7 +8,7 @@ import { InfoPersonajePageRoutingModule } from './info-personaje-routing.module'
 
 import { InfoPersonajePage } from './info-personaje.page';
 import { Prueba2Component } from '../prueba2/prueba2.component';
-import { BarraVidaPage } from '../barra-vida/barra-vida.page';
+
 
 @NgModule({
   imports: [
@@ -16,8 +16,7 @@ import { BarraVidaPage } from '../barra-vida/barra-vida.page';
     FormsModule,
     IonicModule,
     InfoPersonajePageRoutingModule,
-    Prueba2Component,
-    BarraVidaPage
+    Prueba2Component
   ],
   declarations: [InfoPersonajePage]
 })
