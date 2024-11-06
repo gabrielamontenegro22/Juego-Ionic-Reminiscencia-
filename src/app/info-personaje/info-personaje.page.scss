@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
+*{
+  font-family: 'Metal Mania', cursive;
+}
+
+
 ion-content {
   --background: none;
   background-image: url('/assets/fondo.png');
@@ -142,7 +147,7 @@ ion-content {
 
 .title-list-friend {
   text-align: center;
-  font-family: 'Metal Mania', cursive;
+  
   font-size: medium;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -151,27 +156,24 @@ ion-content {
 ion-list {
   max-height: 100px;
   overflow-y: auto;
-  background-color: red;
-  padding: 5px;
+  padding: 0px;
+  background: none;
 
 }
-.b{
-  background-color: aqua;
-}
-.aa{
-  background-color: blueviolet;
-}
-.c{
-  background-color: chartreuse;
-  border-radius: 40px;
-}
+
 
 .friend-item {
   
   display: flex;
   align-items: center;
-  --margin: 5px;
-  --padding: 0px;
+  border-radius: 5px;
+  margin: 5px;
+  --padding: 0;
+  --padding-start: 0px; 
+  --inner-padding-end:0px;
+  padding: 0;
+  --background: #D9D9D9;
+  color: #000;
 }
 
 .profile,
