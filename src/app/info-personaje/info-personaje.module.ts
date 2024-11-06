@@ -7,7 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { InfoPersonajePageRoutingModule } from './info-personaje-routing.module';
 
 import { InfoPersonajePage } from './info-personaje.page';
-import { Prueba2Component } from '../prueba2/prueba2.component';
+
+import { NombreComponenteComponent } from '../nombre-componente/nombre-componente.component';
+import { ListFriendComponent } from '../list-friend/list-friend.component';
+
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { Prueba2Component } from '../prueba2/prueba2.component';
     FormsModule,
     IonicModule,
     InfoPersonajePageRoutingModule,
-    Prueba2Component
+
+    NombreComponenteComponent,
+    ListFriendComponent,
+
   ],
   declarations: [InfoPersonajePage]
 })
