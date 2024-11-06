@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterPageRoutingModule } from './register-routing.module';
+import { BarraVidaPageRoutingModule } from './barra-vida-routing.module';
 
-import { RegisterPage } from './register.page';
+import { BarraVidaPage } from './barra-vida.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegisterPageRoutingModule
+    BarraVidaPageRoutingModule
   ],
-  declarations: [RegisterPage]
+  declarations: [BarraVidaPage]
 })
-export class RegisterPageModule {}
+export class BarraVidaPageModule {}

@@ -1,6 +1,5 @@
 <ion-content fullscreen>
   <div class="main-container">
-    <!-- Superposición para la imagen de fondo -->
     <div class="overlay"></div>
 
     <!-- Sección Izquierda (Master y Volver) -->
@@ -35,7 +34,9 @@
       <div class="players-grid">
         <div class="player" *ngFor="let player of players">
           <img src="assets/profile-photo.png" alt="Player Icon" class="player-icon">
-          <p>{{ player.name }}</p>
+          <p>{{ player.id + ". "+ player.name }} </p>
+          
+          
         </div>
       </div>
     </div>

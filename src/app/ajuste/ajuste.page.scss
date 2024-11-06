@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+
+ion-content {
+    --background: none; /* Elimina cualquier color de fondo predeterminado */
+    background-image: url('/assets/fondo.png'); /* Imagen de fondo */
+    background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px; /* Añadir espacio inferior */
+    
+}
+
+.fondito{
+    background-color: #4e506dc7;
+    height: 100%;
+}
+
+.container-buttons{
+    max-width: 500px;  /* Define el ancho máximo */
+    max-height: 300px; /* Define la altura máxima */
+    height: 230px;   
+    width: 100%;   /* La altura se ajustará automáticamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container-button-back{
+    position: relative;
+    justify-content: center;
+}
+
+.container-button-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+
+.container-img, .container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.play-button {
+    --background: none;
+    --box-shadow: none;
+    background-position:center;
+    background-repeat: no-repeat;
+    color: #5C5C5C;
+    border-radius: 50px;
+    font-family: 'Metal Mania', cursive;
+    margin: -5px;
+    background-image: url("/assets/background-btns.png");
+    background-size: contain;
+    // align-content: center;
+    // height: 5px;
+    width: 100px;
+
+}
+
+.container-button-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.padre{
+    padding: 25px;
+}
+.tarjeta{
+    padding: 50px;
+    height: 320px;
+    width: 600px;
+    font-family: 'Metal Mania', cursive;
+    background-image: url('/assets/ajustes/Tarjeta de seleccion.png'); /* Imagen de fondo */
+    background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-contenido{
+    padding: 50px;
+    height: 280px;
+    width: 510px;
+    font-family: 'Metal Mania', cursive;
+    background-image: url('/assets/ajustes/Rectangle 184.png'); /* Imagen de fondo */
+    background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

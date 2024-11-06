@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
-<<<<<<< HEAD
+.back-btn{
+  position: absolute;
+  padding: 20px;
+  background: none;
+}
+
 ion-content {
   --background: none; /* Elimina cualquier color de fondo predeterminado */
-  background-image: url('/assets/fondo.png'); /* Imagen de fondo */
+  background-image: url('/assets/Inicio de Sesion 1 (1).png'); /* Imagen de fondo */
   background-size: 100% 100%; /* Asegura que la imagen se ajuste completamente al contenedor */
   background-position: center; /* Centra la imagen en la pantalla */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -16,7 +21,7 @@ ion-content {
 
 ion-content.custom-content {
   --background: none;
-  background-image: url('/assets/Inicio de Sesion 1 (1).png'); 
+  background-image: url('/assets/fondo.png'); 
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -75,7 +80,6 @@ input {
   
   
   color: #5C5C5C;
-  //border: 3px solid #000000;
   border-radius: 35px;
   padding: 2%;
   font-family: 'Metal Mania', cursive;
@@ -84,9 +88,7 @@ input {
   width: 20%;
   margin: 1% 0 3% 0;
   text-align: center;
-  //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   background: none;
-  //background-color: #F6FBDB;
   background-image: url('/assets/background-btns.png');
   background-size: 80% 80%;
   background-position:center;
@@ -95,7 +97,7 @@ input {
 
 .login-button:hover {
   //background-color: #5C5C5C;
-  color: white; 
+  color: #5C5C5C; 
 }
 
 .bottom-links {
@@ -138,3 +140,4 @@ input {
   width: 120px;
   height: 73px;
 }
+

@@ -1,0 +1,17 @@
+<ion-content fullscreen>
+  <div class="attributes-container">
+    <div class="attribute-row" *ngFor="let attribute of attributes">
+      <div class="attribute-label">
+        <span>{{ attribute.name }}</span>
+      </div>
+      <div class="attribute-controls">
+        <div class="control">
+          <ion-button (click)="decrement(attribute)" fill="clear" size="small">-</ion-button>
+          <input type="number" [(ngModel)]="attribute.value" readonly />
+          <ion-button (click)="increment(attribute)" fill="clear" size="small">+</ion-button>
+        </div>
+        <ion-range [(ngModel)]="attribute.value" min="0" max="100" step="1"></ion-range>
+      </div>
+    </div>
+  </div>
+</ion-content>
