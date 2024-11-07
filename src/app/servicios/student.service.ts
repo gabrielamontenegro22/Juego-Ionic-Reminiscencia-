@@ -33,4 +33,8 @@ export class StudentService {
   login(credentials: { email: string, phone: string }): Observable<any> {
     return this.http.post<any>(this.apiUrl, credentials);
   }
+  /* asignar sala a jugador */
+  assignSala(id: number, salaId: number): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/${id}/assign-sala`, { salaId });
+  }
 }

@@ -11,13 +11,13 @@ export class EligeRolPage {
   userRole: string | null = '';
 
   constructor(private router: Router) {
-    // Asume que el rol del usuario se guarda en localStorage como 'userRole'
+    
     this.userRole = localStorage.getItem('userRole');
-    console.log('Rol actual del usuario:', this.userRole); // Verificar el rol guardado
+    console.log('Rol actual del usuario:', this.userRole); 
   }
 
   selectRole(role: string) {
-    console.log('Rol seleccionado:', role); // Verificar el rol que intenta acceder
+    console.log('Rol seleccionado:', role);
     if (role === 'master' && this.userRole === 'master') {
       this.router.navigate(['/salas']);
     } else if (role === 'jugador' && this.userRole === 'player') {

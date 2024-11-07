@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../servicios/student.service';
+
 @Component({
   selector: 'app-salas',
   templateUrl: './salas.page.html',
@@ -7,25 +8,25 @@ import { StudentService } from '../servicios/student.service';
 })
 export class SalasPage implements OnInit {
   rooms = [
-    { name: 'Sala 1', id: '000' },
-    { name: 'Sala 2', id: '001' }
+    { name: 'Sala 1', id: '1' },
+    { name: 'Sala 2', id: '2' }
   ];
 
-  players: { id: string; name: string }[] = [];
+  players: { id: string; name: string; salaId: string }[] = [];
 
   constructor(private studentService: StudentService) {}
 
-  ngOnInit() {
+  ngOnInit(){
     this.loadPlayers();
   }
+
 
   loadPlayers() {
     this.studentService.getStudents().subscribe(
       (data) => {
-        // Asegúrate de que el objeto devuelto contiene 'email'
         this.players = data.students.map((student: any) => ({
           id: student.id,
-          name: student.name // Usa el email en lugar del nombre
+          name: student.name,
         }));
       },
       (error) => {
@@ -33,4 +34,5 @@ export class SalasPage implements OnInit {
       }
     );
   }
+
 }

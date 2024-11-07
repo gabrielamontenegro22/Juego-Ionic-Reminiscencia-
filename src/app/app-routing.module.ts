@@ -59,9 +59,13 @@ const routes: Routes = [
     path: 'student-crud',
     loadChildren: () => import('./student-crud/student-crud.module').then( m => m.StudentCrudPageModule)
   },
-
-
-
+  {
+    path: 'assign-sala',
+    loadChildren: () => import('./assign-sala/assign-sala.module').then( m => m.AssignSalaPageModule)
+  },  {
+    path: 'student-list',
+    loadChildren: () => import('./student-list/student-list.module').then( m => m.StudentListPageModule)
+  }
 
 ];
 

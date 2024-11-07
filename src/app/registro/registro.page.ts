@@ -27,7 +27,7 @@ export class RegistroPage {
       this.student.phone &&
       this.student.language
     ) {
-      // Validaciones adicionales antes de enviar al backend
+      
       if (!this.validateEmail(this.student.email)) {
         this.presentAlert('Error', 'Por favor, ingrese un correo válido.');
         return;
@@ -42,7 +42,6 @@ export class RegistroPage {
         async response => {
           console.log('Usuario registrado:', response);
 
-          // Guardar el rol del usuario en localStorage
           localStorage.setItem('userRole', this.student.language);
 
           await this.presentAlert('Éxito', 'Usuario registrado exitosamente.');
