@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { StudentService } from '../servicios/student.service';
 
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -14,6 +15,7 @@ export class RegistroPage {
     phone: '',
     language: ''
   };
+  router: any;
 
   constructor(
     private studentService: StudentService,
@@ -46,6 +48,7 @@ export class RegistroPage {
 
           await this.presentAlert('Éxito', 'Usuario registrado exitosamente.');
           this.resetForm();
+          this.router.navigate(['/salas']);
         },
         async error => {
           console.error('Error al registrar usuario:', error);

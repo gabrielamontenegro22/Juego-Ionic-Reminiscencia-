@@ -65,6 +65,10 @@ const routes: Routes = [
   },  {
     path: 'student-list',
     loadChildren: () => import('./student-list/student-list.module').then( m => m.StudentListPageModule)
+  },
+  {
+    path: 'sigin',
+    loadChildren: () => import('./sigin/sigin.module').then( m => m.SiginPageModule)
   }
 
 ];
