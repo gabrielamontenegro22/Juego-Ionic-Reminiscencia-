@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InfoPersonajePageRoutingModule } from './info-personaje-routing.module';
 
 import { InfoPersonajePage } from './info-personaje.page';
+import { StudentService } from '../servicios/student.service';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { InfoPersonajePage } from './info-personaje.page';
     IonicModule,
     InfoPersonajePageRoutingModule,
   ],
+
+
   declarations: [InfoPersonajePage]
 })
 export class InfoPersonajePageModule {}

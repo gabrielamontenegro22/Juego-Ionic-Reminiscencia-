@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../servicios/student.service';
 
 @Component({
   selector: 'app-info-personaje',
@@ -17,32 +18,41 @@ export class InfoPersonajePage implements OnInit {
   ];
 
   // Lista de amigos
-  friends = [
-    { name: 'Drako', level: 0 },
-    { name: 'Nombre Jugador', level: 0 },
-    { name: 'Nombre Jugador', level: 0 },
-  ];
+  friends: { name: string; level: number; profile_picture: string }[] = [];
 
   // Barras de vida, mana y equipamiento
   health = 0.8;
   mana = 0.6;
   equip = 0.5;
 
-  constructor() {}
+  constructor(private studentService: StudentService) {}
 
-  ngOnInit() {}
-
-  // Métodos para incrementar y decrementar atributos
-  increment(attribute: { value: number }) {
-    if (attribute.value < 100) {
-      attribute.value += 1;
-    }
+  ngOnInit() {
+    this.loadFriends(); // Cargar amigos al iniciar
   }
 
-  decrement(attribute: { value: number }) {
-    if (attribute.value > 0) {
-      attribute.value -= 1;
-    }
+  // Método para cargar amigos desde el servicio
+  loadFriends() {
+    this.studentService.getStudents().subscribe(
+      (response) => {
+        // Mapear la respuesta para incluir la URL de la imagen de perfil
+        this.friends = response.students.map((student: any) => ({
+          name: student.name,
+          level: 0, // Aquí puedes definir la lógica para el nivel
+          profile_picture: student.profile_picture
+            ? this.getImageUrl(student.profile_picture)
+            : 'assets/default-profile.png', // Imagen predeterminada si no hay imagen de perfil
+        }));
+      },
+      (error) => {
+        console.error('Error al cargar amigos:', error);
+      }
+    );
+  }
+
+  // Método para construir la URL completa de la imagen
+  getImageUrl(imagePath: string): string {
+    return `http://127.0.0.1:8000/storage/${imagePath}`;
   }
 
   // Métodos para manejar la lista de amigos
@@ -54,7 +64,7 @@ export class InfoPersonajePage implements OnInit {
     console.log('Eliminar amigo:', friend.name);
   }
 
-  // Métodos adicionales para manipular barras (opcional)
+  // Métodos para manipular barras (opcional)
   adjustHealth(value: number) {
     this.health = Math.min(1, Math.max(0, this.health + value));
   }

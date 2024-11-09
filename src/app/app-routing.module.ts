@@ -1,3 +1,5 @@
+import { StudentListPageModule } from './student-list/student-list.module';
+import { StudentListPage } from './student-list/student-list.page';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +12,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+
   },
   {
     path: 'registro',
@@ -60,17 +63,13 @@ const routes: Routes = [
     loadChildren: () => import('./student-crud/student-crud.module').then( m => m.StudentCrudPageModule)
   },
   {
-    path: 'assign-sala',
-    loadChildren: () => import('./assign-sala/assign-sala.module').then( m => m.AssignSalaPageModule)
-  },  {
     path: 'student-list',
     loadChildren: () => import('./student-list/student-list.module').then( m => m.StudentListPageModule)
   },
   {
-    path: 'sigin',
-    loadChildren: () => import('./sigin/sigin.module').then( m => m.SiginPageModule)
+    path: 'assign-image',
+    loadChildren: () => import('./assign-image/assign-image.module').then( m => m.AssignImagePageModule)
   }
-
 ];
 
 @NgModule({

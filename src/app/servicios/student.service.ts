@@ -37,4 +37,14 @@ export class StudentService {
   assignSala(id: number, salaId: number): Observable<any> {
     return this.http.patch<any>(`${this.apiUrl}/${id}/assign-sala`, { salaId });
   }
+
+  uploadProfilePicture(id: number, formData: FormData): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/${id}/profile-picture`, formData);
+  }
+  
+  // Método para subir una imagen en base64 como perfil del estudiante
+  uploadCapturedProfilePicture(id: number, base64Image: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/${id}/profile-picture`, { profile_picture: base64Image });
+  }
+
 }
