@@ -11,90 +11,62 @@
           <a routerLink="/elige-rol">
             <img src="assets/Volver.png" alt="Volver" class="volver-img">
           </a>
-          <!-- <a routerLink="/elige-rol">
-            <ion-button>
-              <ion-icon name="return-up-back-outline" class="icon-back">
-              </ion-icon>
-                Volver
-              </ion-button>
-            <img src="assets/Volver.png" alt="Volver" class="volver-img">
-          </a> -->
         </div>
       </ion-col>
 
-
-      <ion-col size="10" class="col-rigth">
-
-
+      <ion-col size="10" class="col-right">
         <ion-grid style="height: 100%;">
           <ion-row style="height: 50%;">
-            <ion-col>
-
-            </ion-col>
-            <ion-col>
-
-            </ion-col>
+            <ion-col></ion-col>
+            <ion-col></ion-col>
             <ion-col>
               <div class="friends-list-container">
-                <div>
+                <!-- Título Fijo -->
+                <div class="title-container">
                   <h3 class="title-list-friend">Lista de Amigos</h3>
                 </div>
-
-                <ion-list>
-                  
-                  <ion-item *ngFor="let friend of friends" lines="none" class="friend-item ">
-
-                    <ion-grid >
-                      <ion-row >
-
+                
+                <!-- Lista Desplazable -->
+                <ion-list class="friends-list">
+                  <ion-item *ngFor="let friend of friends" lines="none" class="friend-item">
+                    <ion-grid>
+                      <ion-row>
+                        <!-- Imagen de perfil del amigo -->
                         <ion-col size="3" class="profile">
-                          <img src="assets/personajes/image.webp" alt="Friend Icon" />
+                          <img [src]="friend.profile_picture" alt="Imagen de perfil de {{ friend.name }}" class="profile-pic" />
                         </ion-col>
 
+                        <!-- Contenedor de la tarjeta de amigo -->
+                        <ion-col size="7">
+                          <div class="friend-card">
+                            <!-- Información del amigo -->
+                            <div class="friend-info">
+                              <p class="friend-name">{{ friend.name }}</p>
+                              <p class="friend-level">Nivel {{ friend.level }}</p>
+                            </div>
 
-                        <ion-col size="6" class="friend-info">
-                          <p class="friend-name">{{ friend.name }}</p>
-                          <p class="friend-level">Nivel {{ friend.level }}</p>
-                        </ion-col>
-
-                        <ion-col size="3" class="actions">
-
-                          <ion-button fill="clear" color="success" (click)="sendMessage(friend)" class="btn-list-friend">
-                            <ion-icon name="mail-outline" class="icon-list-friend"></ion-icon>
-                          </ion-button>
-
-                          <ion-button fill="clear" color="danger" (click)="removeFriend(friend)" class="btn-list-friend">
-                            <ion-icon name="trash-outline" class="icon-list-friend"></ion-icon>
-
-                          </ion-button>
+                            <!-- Botones de acción -->
+                            <div class="actions">
+                              <ion-button fill="clear" color="success" (click)="sendMessage(friend)" class="btn-list-friend">
+                                <ion-icon name="mail-outline" class="icon-list-friend"></ion-icon>
+                              </ion-button>
+                              <ion-button fill="clear" color="danger" (click)="removeFriend(friend)" class="btn-list-friend">
+                                <ion-icon name="trash-outline" class="icon-list-friend"></ion-icon>
+                              </ion-button>
+                            </div>
+                          </div>
                         </ion-col>
                       </ion-row>
                     </ion-grid>
                   </ion-item>
                 </ion-list>
               </div>
-
             </ion-col>
           </ion-row>
 
-
           <ion-row style="height: 50%;">
             <ion-col>
-              <!-- <div class="attributes-container">
-                <div class="attribute-row" *ngFor="let attribute of attributes">
-                  <div class="attribute-label">
-                    <span>{{ attribute.name }}</span>
-                  </div>
-                  <div class="attribute-controls">
-                    <div class="control">
-                      <ion-button (click)="decrement(attribute)" fill="clear" size="small" class="btn-atribute">-</ion-button>
-                      <input type="number" [(ngModel)]="attribute.value" readonly />
-                      <ion-button (click)="increment(attribute)" fill="clear" size="small" class="btn-atribute">+</ion-button>
-                    </div>
-                    <ion-range [(ngModel)]="attribute.value" min="0" max="100" step="1"></ion-range>
-                  </div>
-                </div>
-              </div> -->
+              <!-- Sección de Atributos (comentada) -->
             </ion-col>
             <ion-col></ion-col>
             <ion-col></ion-col>
@@ -102,15 +74,5 @@
         </ion-grid>
       </ion-col>
     </ion-row>
-
   </ion-grid>
-
-  <!-- <div class="row">
-    <div class="col-6">
-      
-    </div>
-    <div class="col-6">
-      <app-nombre-componente></app-nombre-componente>
-    </div>
-  </div> -->
 </ion-content>
