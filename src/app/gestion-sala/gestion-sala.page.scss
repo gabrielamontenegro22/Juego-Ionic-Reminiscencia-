@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+  font-family: 'Metal Mania', cursive;
+}
+
+ion-content {
+  --background: none;
+  background-image: url('/assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fondito {
+  background-color: rgba(78, 80, 109, 0.78);
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.master-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.master-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.master-img, .volver-img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  right: 0;
+  width: 6.5px;
+}
+
+.volver-img {
+  margin-top: 180px;
+}
+.center-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh; /* Ajusta para centrar verticalmente */
+  }
+  
+ .tarjeta-seleccion {
+  max-width: 800px; /* Define el ancho máximo */
+  width: 100%; /* Permite que se adapte a pantallas más pequeñas */
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative; /* Asegura que los elementos dentro de la tarjeta se posicionen correctamente */
+}
+
+.tarjeta-seleccion img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.rectangle-image {
+    max-width: 260px; /* Aumenta el tamaño máximo de la imagen */
+    width: 100%; /* Esto asegura que la imagen se ajuste al tamaño máximo especificado */
+    height: auto; /* Mantiene la relación de aspecto */
+    position: absolute;
+    top: 48%; /* Centra la imagen verticalmente dentro de la tarjeta */
+    left: 50%; /* Centra la imagen horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro de la imagen */
+    z-index: 0; /* Asegura que esta imagen quede detrás del texto */
+  }
+  
+.game-title {
+  position: absolute;
+  top: 20px; /* Ajusta la posición desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el texto horizontalmente */
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* Cambia este color según lo necesites */
+  text-align: center;
+  z-index: 1; /* Asegura que el texto esté encima de la imagen */
+}
+/* Contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-evenly; /* Ajusta para acercar más los botones */
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 35px; /* Ajusta para subir los botones (valor menor al anterior) */
+    left: 0;
+    padding: 1px; /* Ajusta el padding para acercar los botones */
+}
+
+  
+  /* Estilo para los botones */
+  ion-button {
+    width: 20%; /* Reduce el ancho del botón (hace los botones más estrechos) */
+    height: auto;
+    padding: 0;
+    background-color: transparent; /* Hace que el fondo sea transparente */
+    border: none; /* Elimina el borde del botón */
+    box-shadow: none; /* Elimina cualquier sombra del botón */
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro del botón */
+    align-items: center; /* Centra la imagen dentro del botón */
+  }
+  
+  /* Estilos específicos para el botón de configuración */
+  .configuraciones-btn {
+    --background: #f5ffc8 !important;
+    color: #000000 !important;
+  }
+  
+  /* Estilos específicos para el botón de cerrar sala */
+  .cerrar-sala-btn {
+    --background: #ef4848 !important;
+    color: #000000 !important;
+  }
+  
