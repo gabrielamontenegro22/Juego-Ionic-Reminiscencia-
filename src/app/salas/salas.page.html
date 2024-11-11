@@ -24,12 +24,10 @@
       </div>
 
       <div class="button-container">
-        <ion-button expand="block" class="crear-sala-btn">Crear Sala</ion-button>
-        <ion-button expand="block" class="eliminar-sala-btn">Eliminar Sala</ion-button>
+        <ion-button expand="block" class="crear-sala-btn" (click)="createRoom()">Crear Sala</ion-button>
+        <ion-button expand="block" class="eliminar-sala-btn" (click)="deleteRoom()">Eliminar Sala</ion-button>
       </div>
     </div>
-
-
 
     <!-- Sección Derecha (Jugadores en Línea) -->
     <div class="right-section">
@@ -39,8 +37,6 @@
           <img src="assets/profile-photo.png" alt="Player Icon" class="player-icon">
           <p>{{ player.id + ". "+ player.name }} </p>
           <button></button>
-
-
         </div>
       </div>
     </div>

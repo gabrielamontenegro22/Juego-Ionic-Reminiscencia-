@@ -16,10 +16,9 @@ export class SalasPage implements OnInit {
 
   constructor(private studentService: StudentService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.loadPlayers();
   }
-
 
   loadPlayers() {
     this.studentService.getStudents().subscribe(
@@ -35,4 +34,19 @@ export class SalasPage implements OnInit {
     );
   }
 
+  createRoom() {
+    if (this.rooms.length < 2) {
+      const newRoomId = (this.rooms.length + 1).toString();
+      const newRoom = { name: `Sala ${newRoomId}`, id: newRoomId };
+      this.rooms.push(newRoom);
+    } else {
+      console.log('Ya existen dos salas. No es posible crear más.');
+    }
+  }
+
+  deleteRoom() {
+    if (this.rooms.length > 0) {
+      this.rooms.pop();
+    }
+  }
 }

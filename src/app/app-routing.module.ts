@@ -69,6 +69,14 @@ const routes: Routes = [
   {
     path: 'assign-image',
     loadChildren: () => import('./assign-image/assign-image.module').then( m => m.AssignImagePageModule)
+  },
+  {
+    path: 'asignar-sala',
+    loadChildren: () => import('./assign-sala/assign-sala.module').then( m => m.AssignSalaPageModule)
+  },
+  {
+    path: 'prueba3',
+    loadChildren: () => import('./prueba3/prueba3.module').then( m => m.Prueba3PageModule)
   }
 ];
 

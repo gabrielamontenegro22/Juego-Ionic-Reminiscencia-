@@ -1,0 +1,21 @@
+<div>
+  <label for="range">Rango de Fuerza:</label>
+  <input
+    type="range"
+    id="range"
+    min="0"
+    max="100"
+    [(ngModel)]="fuerza"
+    (input)="calcularMagia()"
+  />
+
+  <div>
+    <label>Fuerza:</label>
+    <input type="range" min="0" max="100" [value]="fuerza" readonly />
+  </div>
+
+  <div>
+    <label>Magia:</label>
+    <input type="range" min="0" max="100" [value]="magia" readonly />
+  </div>
+</div>

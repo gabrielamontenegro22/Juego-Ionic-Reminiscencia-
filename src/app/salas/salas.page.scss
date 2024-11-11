@@ -107,12 +107,16 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 15px;
+  position: absolute; /* Asegura que la posición sea relativa a la sección */
+  bottom: 20px; /* Espaciado desde la parte inferior */
+  left: 0;
+  padding: 0 20px;
 }
 
 .crear-sala-btn, .eliminar-sala-btn {
   flex: 1;
   padding: 10px;
+  margin: 0 5px;
   border-radius: 0;
   box-shadow: none;
 }
@@ -126,6 +130,7 @@
   --background: #ef4848 !important;
   color: #ffffff !important;
 }
+
 
 /* Right Section - Online Players */
 .right-section {
