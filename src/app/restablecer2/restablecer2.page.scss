@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+.custom-content {
+  --background: none;
+  background-image: url('/assets/fondo.png'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.password-reset-container {
+    position: relative; /* Necesario para que los elementos absolutos se posicionen dentro de este contenedor */
+    padding-top: 0; /* Elimina cualquier padding adicional si es necesario */
+    height: 90vh; /* Ajusta la altura al 80% de la altura de la ventana */
+        top: 20px; /* Ajusta este valor */
+        }
+  
+  .password-reset-container h2 {
+    position: absolute;
+    top: 55px; /* Ajusta este valor para subir o bajar el texto */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Metal Mania';
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0; /* Elimina el margen extra */
+    text-align: center;
+  }
+  
+  .password-reset-container p {
+    font-family: 'Metal Mania', cursive !important;
+    font-size: 12px !important;
+    color: #ffffff !important;
+    margin-top: 5px; /* Ajusta este valor para subir el párrafo */
+    text-align: center;
+  }
+.password-reset-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/Decoracion.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.password-reset-container h2 {
+  font-family: 'Metal Mania', cursive;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+.title-section {
+  margin-bottom: 20px;
+}
+
+.title-section .logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.title-section .title {
+  font-size: 1.5em;
+}
+
+.title-section .subtitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.reset-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6FBDB;
+  border-radius: 25px;
+  margin: 8px 0;
+  padding: 4px 10px; /* Reduce el padding para hacerlos más compactos */
+  border: 3px solid #000000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 10px; /* Ajusta este valor para bajar los campos juntos */
+
+
+  
+}
+
+.reset-form {
+    width: 100%;
+    margin-top: -15px; /* Ajusta este valor para bajar los campos juntos */
+  }
+  
+
+.input-group input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  color: #000;
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+}
+
+.button-group {
+text-decoration: none;
+  margin-top: 20px;
+  
+}
+
+.cancel-button, .next-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Metal Mania', cursive;
+  font-size: 1em;
+  cursor: pointer;
+  width: 45%;
+  text-align: center;
+  color: #000000;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #000000; 
+  background-color: #F6FBDB; 
+
+
+}
+
+.game-title {
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    text-align: center;
+    animation: slide 2s ease-in-out infinite alternate;
+  }
+  
+  .game-title img {
+    width: 120px;
+    height: 73px;
+  }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.logo-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 8px;
+    position: relative; /* Añade posición relativa */
+    top: -50px; /* Ajusta este valor para mover hacia arriba */
+}
+
+
+  .account-text {
+    font-family: 'Metal Mania', cursive;
+    font-size: 24px;
+    color: #ffffff;
+    position: relative;
+    top: -75px; /* Ajusta este valor para mover el texto hacia arriba */
+  }  
