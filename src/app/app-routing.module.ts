@@ -4,13 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'ajuste',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-
   },
   {
     path: 'registro',
@@ -53,20 +52,23 @@ const routes: Routes = [
     loadChildren: () => import('./barra-vida/barra-vida.module').then( m => m.BarraVidaPageModule)
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
     path: 'ajuste',
     loadChildren: () => import('./ajuste/ajuste.module').then( m => m.AjustePageModule)
+  },
+  {
+    path: 'gestion-sala',
+    loadChildren: () => import('./gestion-sala/gestion-sala.module').then( m => m.GestionSalaPageModule)
+  },
+  {
+    path: 'restablecer',
+    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+  },
+  {
+    path: 'restablecer2',
+    loadChildren: () => import('./restablecer2/restablecer2.module').then( m => m.Restablecer2PageModule)
   }
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> DarwinMora
 ];
 
 @NgModule({
