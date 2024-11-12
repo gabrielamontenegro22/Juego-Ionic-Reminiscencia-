@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+ion-content.custom-content {
+  --background: none;
+  background-image: url('/assets/fondo.png'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.password-reset-container p {
+    font-family: 'Metal Mania', cursive !important;
+    font-size: 11px !important;
+    color: #ffffff !important;
+    margin-top: 70px; /* Ajusta este valor para subir el párrafo */
+    text-align: center;
+  }
+  
+  .password-reset-container {
+    position: relative; /* Necesario para que los elementos absolutos se posicionen dentro de este contenedor */
+    padding-top: 0; /* Elimina cualquier padding adicional si es necesario */
+    height: 85vh; /* Ajusta la altura al 80% de la altura de la ventana */
+        top: 20px; /* Ajusta este valor */
+        }
+  
+  .password-reset-container h2 {
+    position: absolute;
+    top: 63px; /* Ajusta este valor para subir o bajar el texto */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Metal Mania';
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0; /* Elimina el margen extra */
+    text-align: center;
+  }
+  
+  
+.password-reset-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/Decoracion.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.password-reset-container h2 {
+  font-family: 'Metal Mania', cursive;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #F6FBDB; 
+    border-radius: 25px;
+    padding: 9px 15px;
+    width: 90%;
+    border: 3px solid #000000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: -10px; /* Ajusta el valor negativo para subirlo */
+
+  }
+.input-group ion-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Metal Mania', cursive;
+  font-size: 18px;
+  color: #000000;
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+
+
+.verify-button:hover {
+  color: #5C5C5C; 
+}
+.verify-button{
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Metal Mania', cursive;
+    font-size: 14px;
+    background-color: #F6FBDB; 
+    padding: 7px 15px;
+    border-radius: 15px; 
+    border: 2px solid #000000; 
+    transition: background-color 0.3s ease; 
+    margin-top: 15px; /* Ajusta este valor para bajar el botón */
+
+  }
+
+.game-title {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  text-align: center;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+
+.game-title img {
+  width: 120px;
+  height: 73px;
+}
+.logo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 8px;
+    margin-top: -45px; /* Ajusta el valor negativo para subirla más */
+  }
+  
+  
+  .account-text {
+    font-family: 'Metal Mania', cursive;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: -45px; /* Ajusta el valor negativo para subirla más */
+
+  }
+  

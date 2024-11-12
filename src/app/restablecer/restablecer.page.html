@@ -1,0 +1,32 @@
+<ion-content class="custom-content" [fullscreen]="true">
+  <!--
+  <button class="back-btn" routerLink="/inicio">
+    <ion-icon name="arrow-back-circle-outline" color="light" size="large"></ion-icon>
+  </button>
+  -->
+  
+    <div class="password-reset-container">
+      <!-- Contenedor para el logo de la calavera y el texto "Cuenta" -->
+      <div class="logo-header">
+        <img src="/assets/logoramdom.png" alt="Logo Calavera" class="logo-image" />
+        <span class="account-text">Cuenta</span>
+      </div>
+      <h2>Restablecer la <br> Contraseña</h2>
+      <p>Ingresa un correo o número que esté vinculado con una cuenta del juego</p>
+      
+      <form (ngSubmit)="resetPassword()" style="display: contents;">
+        <div class="input-group">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" placeholder="Correo o Número" required />
+        </div>
+        
+        <button type="submit" class="verify-button">Verificar Cuenta</button>
+      </form>
+    </div>
+    
+    <div class="game-title">
+      <img src="/assets/Titulo_Juego1.png" alt="Título del Juego">
+    </div>
+  </ion-content>
+  
+  
