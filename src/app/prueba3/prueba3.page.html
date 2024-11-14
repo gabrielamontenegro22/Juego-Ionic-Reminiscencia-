@@ -1,21 +1,171 @@
-<div>
-  <label for="range">Rango de Fuerza:</label>
-  <input
-    type="range"
-    id="range"
-    min="0"
-    max="100"
-    [(ngModel)]="fuerza"
-    (input)="calcularMagia()"
-  />
+<ion-grid>
+  <ion-row>
+    <!-- Primera columna: Estamina y Balance -->
+    <ion-col>
+      <div>
+        <div><label>Estamina:</label></div>
+        <input type="range" min="0" max="100" [value]="estamina" readonly />
+      </div>
 
-  <div>
-    <label>Fuerza:</label>
-    <input type="range" min="0" max="100" [value]="fuerza" readonly />
-  </div>
+      <div>
+        <div><label>Balance:</label></div>
+        <input type="range" min="0" max="100" [value]="balance" readonly />
+      </div>
+    </ion-col>
 
-  <div>
-    <label>Magia:</label>
-    <input type="range" min="0" max="100" [value]="magia" readonly />
-  </div>
-</div>
+    <!-- Segunda columna: Rango de Fuerza -->
+    <ion-col>
+      <div>
+        <div><label for="range">Fuerza:</label></div>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="fuerza"
+        (input)="calcularMagia()"
+      />
+      </div>
+      <div>
+        <label for="range">inteligencia:</label>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="inteligencia"
+        (input)="calcularInteligencia()"
+      />
+      </div>
+    </ion-col>
+    <!-- Tercera columna primera fila -->
+    <ion-col>
+      <div>
+        <label>musculatura:</label>
+        <input type="range" min="0" max="100" [value]="musculatura" readonly />
+      </div>
+
+      <div>
+        <label>punteria:</label>
+        <input type="range" min="0" max="100" [value]="punteria" readonly />
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+  <!-- Segunda fila para otros valores -->
+  <ion-row>
+    <!-- Tercera columna: Resistencia, Conocimiento y Fuerza de Voluntad -->
+    <ion-col> 
+      <div>
+        <label>Resistencia:</label>
+        <input type="range" min="0" max="100" [value]="resistencia" readonly />
+      </div>
+
+      <div>
+        <label>Conocimiento:</label>
+        <input type="range" min="0" max="100" [value]="conocimiento" readonly />
+      </div>
+    </ion-col>
+
+    <!-- Cuarta columna: Rango de Resistencia -->
+    <ion-col>
+      <div>
+        <div><label for="range">destreza:</label></div>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="destreza"
+        (input)="calcularDestreza()"
+      />
+      </div>
+      <div>
+        <div> <label for="range">sabiduria:</label></div>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="sabiduria"
+        (input)="calcularSabiduria()"
+      />
+      </div>
+      
+    </ion-col>
+
+    <ion-col>
+      <div>
+        <div><label>salud:</label></div>
+        <input type="range" min="0" max="100" [value]="salud" readonly />
+      </div>
+
+      <div>
+        <div><label>logica:</label></div>
+        <input type="range" min="0" max="100" [value]="logica" readonly />
+      </div>
+    </ion-col>
+    
+    
+  </ion-row>
+
+  <!-- tercera fila construccion -->
+
+  <ion-row>
+
+    <ion-col>
+      <div>
+        <div><label>Fvoluntad:</label></div>
+        <input type="range" min="0" max="100" [value]="Fvoluntad" readonly />
+      </div>
+
+      <div>
+        <div><label>Carisma:</label></div>
+        <input type="range" min="0" max="100" [value]="carisma" readonly />
+      </div>
+    </ion-col>
+
+    <!-- Cuarta columna: Rango de Resistencia -->
+    <ion-col>
+      <div>
+        <label for="range">construccion:</label>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="construccion"
+        (input)="calcularConstruccion()"
+      />
+      </div>
+      <div>
+        <div><label for="range">apariencia</label></div>
+      <input
+        type="range"
+        id="range"
+        min="0"
+        max="100"
+        [(ngModel)]="apariencia"
+        (input)="calcularApariencia()"
+      />
+      </div>
+
+      
+    </ion-col>
+    
+    <ion-col>
+      <div>
+        <label>intuicion:</label>
+        <input type="range" min="0" max="100" [value]="intuicion" readonly />
+      </div>
+
+      <div>
+        <label>verborrea:</label>
+        <input type="range" min="0" max="100" [value]="verborrea" readonly />
+      </div>
+    </ion-col>
+    
+  </ion-row>
+
+</ion-grid>

@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl = 'http://127.0.0.1:8000/api/students';
+  private apiUrl = 'http://192.168.112.18:8000/api/students';
+
+
 
   constructor(private http: HttpClient) { }
 
@@ -47,4 +49,9 @@ export class StudentService {
     return this.http.post<any>(`${this.apiUrl}/${id}/profile-picture`, { profile_picture: base64Image });
   }
 
+
+  // Nuevo método para guardar el token en localStorage
+  saveToken(token: string): void {
+    localStorage.setItem('token', token);
+  }
 }

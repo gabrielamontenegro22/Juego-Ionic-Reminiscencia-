@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { StudentService } from '../servicios/student.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -15,11 +15,11 @@ export class RegistroPage {
     phone: '',
     language: ''
   };
-  router: any;
 
   constructor(
     private studentService: StudentService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private router: Router
   ) {}
 
   registerStudent() {
@@ -44,7 +44,9 @@ export class RegistroPage {
         async response => {
           console.log('Usuario registrado:', response);
 
+          // Guarda el rol del usuario y el token en el local storage
           localStorage.setItem('userRole', this.student.language);
+          localStorage.setItem('token', 'true'); // Aquí establecemos el token como true
 
           await this.presentAlert('Éxito', 'Usuario registrado exitosamente.');
           this.resetForm();
