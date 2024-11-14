@@ -28,20 +28,19 @@ ion-content.custom-content {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-  padding-top: 70px;
+  padding-top: 30px; /* Reduce el espacio superior para que los inputs suban */
 }
-
 .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Reduce la separación entre grupos de input */
   color: #00000018;
-  background-color: #F6FBDB; 
-  border-radius: 25px;
-  padding: 10px 20px;
-  width: 40%;
-  border: 3px solid #000000; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #F6FBDB;
+  border-radius: 20px; /* Reduce el radio de borde */
+  padding: 5px 15px; /* Reduce el espacio interno */
+  width: 35%; /* Reduce el ancho del input */
+  border: 2px solid #000000; /* Ajusta el grosor del borde */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduce la sombra */
 }
 
 .input-icon {
