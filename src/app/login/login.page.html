@@ -1,6 +1,6 @@
 <ion-content class="custom-content" [fullscreen]="true">
   <button class="back-btn" routerLink="/inicio">
-    <ion-icon name="arrow-back-circle-outline" color="light" size="large"></ion-icon>
+    <ion-icon name="arrow-back-circle-outline" color="ligth" size="large"></ion-icon>
   </button>
   <div class="login-container">
     <form (ngSubmit)="login()" style="display: contents;">
@@ -23,7 +23,7 @@
 
     <div class="bottom-links">
       <a href="#" class="link">¿Olvidaste tu contraseña?</a>
-      <a href="#" class="link">Registra una cuenta</a>
+      <a routerLink="/registro" class="link">Registra una cuenta</a>
     </div>
   </div>
 

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl = 'http://192.168.112.18:8000/api/students';
+  private apiUrl = 'http://127.0.0.1:8000/api/students';
 
 
 
