@@ -89,17 +89,50 @@
   background-color: #f0f0f0;
   border-radius: 8px;
   padding: 10px;
-  margin: 10px auto;
+  margin: 3px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: 22vh; /* Aumenta el valor de la altura */
 }
 
+.room {
+  margin-top: -10px;  /* Ajusta el valor según sea necesario */
+}
+.room:nth-of-type(2) {
+  margin-top: 5px;  /* Ajusta este valor según sea necesario */
+}
+
+.room-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 .room-details p {
   margin: 0;
-  color: #333;
   font-size: 1rem;
+  color: #000000;
+}
+.room-details p:nth-child(1) {
+  margin-top: -50px; /* Ajusta este valor según sea necesario */
+}
+.room-details p:nth-child(2) {
+  margin-top: -50px; /* Ajusta este valor según sea necesario */
+}
+.room-details::after {
+  content: '';
+  position: absolute;
+  bottom: 5px; /* Ajusta el valor de bottom para subir la línea */
+  left: 0;
+  right: 0;
+  height: 10px; /* Ajusta el tamaño según lo necesites */
+  background-image: url('/assets/lineaaa.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Button Container - Create and Delete Room Buttons */
@@ -107,13 +140,15 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 5px; /* Ajusta este valor a un número negativo para mover los botones hacia arriba */
 }
+
 
 .crear-sala-btn, .eliminar-sala-btn {
   flex: 1;
-  padding: 10px;
-  border-radius: 0;
+  padding: 5px 8px; /* Reduce el tamaño del padding */
+  font-size: 12px; /* Ajusta el tamaño de la fuente para que sea más pequeño */
+  border-radius: 4px; /* Reduce el radio del borde para hacerlo más compacto */
   box-shadow: none;
 }
 
