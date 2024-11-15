@@ -1,0 +1,30 @@
+<ion-content class="custom-content" [fullscreen]="true">
+  <div class="asignar-sala-container">
+    <h2>Asignar una Sala</h2>
+
+    <form class="reset-form">
+      <!-- Dropdown estilizado para seleccionar estudiante -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">Seleccionar Estudiante <ion-icon name="chevron-down"></ion-icon></button>
+        <ul class="dropdown-menu">
+          <li>Estudiante 1</li>
+          <li>Estudiante 2</li>
+          <li>Estudiante 3</li>
+        </ul>
+      </div>
+
+      <!-- Input para el ID de la sala -->
+      <div class="input-group">
+        <input type="text" placeholder="ID de la Sala" required />
+      </div>
+
+      <div class="button-group">
+        <button class="assign-room-button">Asignar Sala</button>
+      </div>
+    </form>
+
+    <div class="game-title">
+      <img src="/assets/Titulo_Juego1.png" alt="Título del Juego" />
+    </div>
+  </div>
+</ion-content>

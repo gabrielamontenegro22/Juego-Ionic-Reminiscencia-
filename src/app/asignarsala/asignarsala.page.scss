@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+.custom-content {
+  --background: none;
+  background-image: url('/assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.asignar-sala-container {
+  position: relative;
+  padding-top: 0;
+  height: 90vh;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/Decoracion.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.asignar-sala-container h2 {
+  font-family: 'Metal Mania', cursive;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6FBDB;
+  border-radius: 25px;
+  margin: 8px 0;
+  padding: 4px 10px;
+  border: 3px solid #000000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-group input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  color: #000;
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+  padding: 10px;
+  border-radius: 15px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+/* Dropdown estilizado */
+.dropdown {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  background-color: #F6FBDB;
+  color: #000000;
+  padding: 12px;
+  font-size: 1.2em;
+  font-family: 'Metal Mania', cursive;
+  text-align: left;
+  border: 3px solid #000000;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #F6FBDB;
+  border-radius: 15px;
+  margin-top: 5px;
+  list-style: none;
+  width: 100%;
+  border: 2px solid #000000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  font-family: 'Metal Mania', cursive;
+  font-size: 1.1em;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f8cac0;
+  color: #000000;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.reset-form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button-group {
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.assign-room-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Metal Mania', cursive;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #000000;
+  background-color: #F6FBDB;
+  transition: background-color 0.3s ease;
+}
+
+.assign-room-button:hover {
+  background-color: #fbcec6;
+  color: #ffffff;
+}
+
+.game-title {
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  text-align: center;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+
+.game-title img {
+  width: 120px;
+  height: 73px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border: 3px solid #FF6347;
+}
