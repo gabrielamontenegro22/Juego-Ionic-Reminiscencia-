@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { StudentService } from './../servicios/student.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -14,6 +15,7 @@ export class AssignSalaPage implements OnInit {
   students: any[] = [];
 
   constructor(
+    private router: Router,
     private studentService: StudentService,
     private fb: FormBuilder
   ) {
@@ -46,6 +48,7 @@ export class AssignSalaPage implements OnInit {
       (response) => {
         console.log('Sala assigned successfully:', response);
         alert('Sala asignada correctamente');
+        this.router.navigate(['/salas']);
       },
       (error) => {
         console.error('Error assigning sala:', error);

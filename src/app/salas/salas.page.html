@@ -19,8 +19,12 @@
       <div class="room" *ngFor="let room of rooms">
         <div class="room-details">
           <p>{{ room.name }}</p>
-          <p>Id: {{ room.id }}</p>          
+          <p>Id: {{ room.id }}</p>
+              
         </div>
+        <div *ngFor="let player of playersInSala1">
+          <p>{{ player.id + ". " + player.name }}</p>
+        </div>    
       </div>
 
       <div class="button-container">

@@ -33,15 +33,17 @@ ion-content.custom-content {
 .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 8px; /* Reduce la separación entre grupos de input */
+  margin-bottom: 8px; /* Reducido, pero puedes ajustarlo si lo deseas */
   color: #00000018;
   background-color: #F6FBDB;
-  border-radius: 20px; /* Reduce el radio de borde */
-  padding: 5px 15px; /* Reduce el espacio interno */
-  width: 35%; /* Reduce el ancho del input */
-  border: 2px solid #000000; /* Ajusta el grosor del borde */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduce la sombra */
+  border-radius: 20px; 
+  padding: 5px 15px;
+  width: 35%;
+  border: 2px solid #000000; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 18px; /* Este margen bajará los campos de nombre, correo y teléfono */
 }
+
 
 .input-icon {
   margin-right: 10px;
@@ -68,6 +70,8 @@ input {
   align-items: center;
   justify-content: center;
   width: 60%;
+  margin-top: 15px; /* Agrega margen superior para bajar el botón */
+
 }
 
 .role-select {
