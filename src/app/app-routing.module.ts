@@ -69,6 +69,10 @@ const routes: Routes = [
   },  {
     path: 'habilidadesgeneral',
     loadChildren: () => import('./habilidadesgeneral/habilidadesgeneral.module').then( m => m.HabilidadesgeneralPageModule)
+  },
+  {
+    path: 'asignarsala',
+    loadChildren: () => import('./asignarsala/asignarsala.module').then( m => m.AsignarsalaPageModule)
   }
 
 
