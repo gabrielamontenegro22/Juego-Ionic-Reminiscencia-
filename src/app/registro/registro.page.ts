@@ -50,7 +50,7 @@ export class RegistroPage {
 
           await this.presentAlert('Éxito', 'Usuario registrado exitosamente.');
           this.resetForm();
-          this.router.navigate(['/salas']);
+          this.router.navigate(['/login']);
         },
         async error => {
           console.error('Error al registrar usuario:', error);

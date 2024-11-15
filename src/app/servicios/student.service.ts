@@ -54,4 +54,17 @@ export class StudentService {
   saveToken(token: string): void {
     localStorage.setItem('token', token);
   }
+
+  verifyAccount(emailOrPhone: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/verify-account`, { email_or_phone: emailOrPhone });
+  }
+  
+  
+  updatePassword(id: number, newPassword: string, confirmPassword: string): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/${id}/update-password`, {
+      new_password: newPassword,
+      new_password_confirmation: confirmPassword
+    });
+  }
+  
 }

@@ -1,4 +1,7 @@
 <ion-content class="custom-content" [fullscreen]="true">
+  <button class="back-btn" routerLink="/inicio">
+    <ion-icon name="arrow-back-circle-outline" color="ligth" size="large"></ion-icon>
+  </button>
   <div class="login-container">
     <form (ngSubmit)="registerStudent()" style="display: contents;">
       <div class="input-group">
@@ -19,7 +22,7 @@
         <div class="input-icon">
           <img src="/assets/psswdRegist.png" alt="Password Icon">
         </div>
-        <input type="tel" [(ngModel)]="student.phone" name="phone" placeholder="Teléfono (10 dígitos)" required minlength="10" maxlength="10" pattern="[0-9]*" />
+        <input type="password" [(ngModel)]="student.phone" name="phone" placeholder="contraseña (10 dígitos)" required minlength="10" maxlength="10" pattern="[0-9]*" />
       </div>
 
       <div class="actions-container">

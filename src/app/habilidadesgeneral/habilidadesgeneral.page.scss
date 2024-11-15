@@ -1,0 +1,208 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+  font-family: 'Metal Mania', cursive;
+  box-sizing: border-box;
+}
+
+/* Estilos de ion-content */
+ion-content {
+  --background: none;
+  background-image: url('/assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Estilos para la columna izquierda */
+.col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+}
+
+/* Sección de la izquierda */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Contenedor del Master */
+.master-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Icono del Master */
+.master-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Imágenes de los botones */
+.master-img, .volver-img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.volver-img {
+  margin-top: 120px;
+}
+
+/* Línea vertical */
+.line {
+  position: absolute;
+  right: 0;
+  width: 6.5px;
+}
+
+/* Contenedor del árbol */
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  margin-top: 20px; /* Ajusta el valor para controlar la distancia */
+}
+
+/* Nodo Principal */
+.root-node {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.root-icon {
+  font-size: 4rem;
+  color: #fff;
+}
+
+/* Atributos y Ramas */
+.branches {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.attribute-branch {
+  text-align: center;
+}
+
+.attribute-node {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.sub-nodes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-node {
+  background-color: #555;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60px;
+  text-align: center;
+}
+
+.sub-node-value {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+/* Estilos para pantallas en modo horizontal de 658px de ancho y 320px de alto */
+@media (max-width: 658px) and (max-height: 320px) and (orientation: landscape) {
+
+  /* Estilos de ion-content */
+  ion-content {
+    background-image: url('/assets/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row; /* Cambiar a fila en horizontal */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Columna izquierda en horizontal */
+  .col-left {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; /* Ajustar la columna en fila para el modo horizontal */
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+  }
+
+  .master-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .master-img, .volver-img {
+    width: 100px;
+    margin-bottom: 5px;
+  }
+
+  /* Contenedor del árbol en horizontal */
+  .tree-container {
+    flex: 3;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+
+  .root-node {
+    font-size: 3rem;
+  }
+
+  .branches {
+    flex-direction: row; /* Alinear los atributos en fila para ahorrar espacio */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .attribute-node {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .sub-node {
+    padding: 5px;
+    width: 50px;
+  }
+
+  .sub-node-value {
+    font-size: 1rem;
+  }
+}

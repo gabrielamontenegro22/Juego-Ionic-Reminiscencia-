@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular'; // Importar AlertController
 
 @Component({
   selector: 'app-elige-rol',
@@ -7,13 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./elige-rol.page.scss'],
 })
 export class EligeRolPage {
-
   userRole: string | null = '';
 
-  constructor(private router: Router) {
-    
+  constructor(
+    private router: Router,
+    private alertController: AlertController // Inyectar AlertController
+  ) {
     this.userRole = localStorage.getItem('userRole');
-    console.log('Rol actual del usuario:', this.userRole); 
+    console.log('Rol actual del usuario:', this.userRole);
+  }
+
+  async presentAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header,
+      message,
+      buttons: ['OK'],
+    });
+    await alert.present();
   }
 
   selectRole(role: string) {
@@ -23,7 +34,7 @@ export class EligeRolPage {
     } else if (role === 'jugador' && this.userRole === 'player') {
       this.router.navigate(['/inicio']);
     } else {
-      alert('No tienes permiso para acceder a esta sección');
+      this.presentAlert('Acceso denegado', 'No tienes permiso para acceder a esta sección');
     }
   }
 }

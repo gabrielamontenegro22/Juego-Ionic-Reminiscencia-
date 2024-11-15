@@ -85,8 +85,21 @@ const routes: Routes = [
     path: 'gestion-salas',
     loadChildren: () => import('./gestion-sala/gestion-sala.module').then(m => m.GestionSalaPageModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'habilidades',
+    loadChildren: () => import('./habilidadesgeneral/habilidadesgeneral.module').then( m => m.HabilidadesgeneralPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'reestablecer',
+    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'reestablecer2',
+    loadChildren: () => import('./restablecer2/restablecer2.module').then( m => m.Restablecer2PageModule)
   }
-  
 ];
 
 @NgModule({
