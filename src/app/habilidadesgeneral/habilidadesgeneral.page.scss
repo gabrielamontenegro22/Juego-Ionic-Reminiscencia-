@@ -5,6 +5,19 @@
   font-family: 'Metal Mania', cursive;
   box-sizing: border-box;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/cuadrofondosalas.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  border-radius: 0; /* Asegúrate de que no haya bordes redondeados */
+}
+
 
 /* Estilos de ion-content */
 ion-content {
@@ -18,6 +31,7 @@ ion-content {
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 /* Estilos para la columna izquierda */
 .col-left {
