@@ -120,6 +120,13 @@ input {
   margin: 5px;
 }
 
+.back-btn{
+  position: absolute;
+  padding: 20px;
+  background: none;
+}
+
+
 @keyframes slide {
   0% {
     transform: translateX(0px); /* Inicia a la derecha */

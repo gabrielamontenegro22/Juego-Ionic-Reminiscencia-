@@ -86,7 +86,7 @@
 
 .room {
   width: 90%;
-  background-color: #f0f0f0;
+  background-color: #ff0000;
   border-radius: 8px;
   padding: 10px;
   margin: 3px auto;
@@ -140,15 +140,18 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 5px; /* Ajusta este valor a un número negativo para mover los botones hacia arriba */
+  position: absolute; /* Asegura que la posición sea relativa a la sección */
+  bottom: 20px; /* Espaciado desde la parte inferior */
+  left: 0;
+  padding: 0 20px;
 }
 
 
 .crear-sala-btn, .eliminar-sala-btn {
   flex: 1;
-  padding: 5px 8px; /* Reduce el tamaño del padding */
-  font-size: 12px; /* Ajusta el tamaño de la fuente para que sea más pequeño */
-  border-radius: 4px; /* Reduce el radio del borde para hacerlo más compacto */
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -161,6 +164,7 @@
   --background: #ef4848 !important;
   color: #ffffff !important;
 }
+
 
 /* Right Section - Online Players */
 .right-section {

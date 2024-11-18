@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { StudentService } from '../servicios/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -17,7 +18,8 @@ export class RegistroPage {
 
   constructor(
     private studentService: StudentService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private router: Router
   ) {}
 
   registerStudent() {
@@ -27,7 +29,7 @@ export class RegistroPage {
       this.student.phone &&
       this.student.language
     ) {
-      // Validaciones adicionales antes de enviar al backend
+      
       if (!this.validateEmail(this.student.email)) {
         this.presentAlert('Error', 'Por favor, ingrese un correo válido.');
         return;
@@ -42,11 +44,13 @@ export class RegistroPage {
         async response => {
           console.log('Usuario registrado:', response);
 
-          // Guardar el rol del usuario en localStorage
+          // Guarda el rol del usuario y el token en el local storage
           localStorage.setItem('userRole', this.student.language);
+          localStorage.setItem('token', 'true'); // Aquí establecemos el token como true
 
           await this.presentAlert('Éxito', 'Usuario registrado exitosamente.');
           this.resetForm();
+          this.router.navigate(['/login']);
         },
         async error => {
           console.error('Error al registrar usuario:', error);

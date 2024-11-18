@@ -7,8 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class StudentService {
   private apiUrl = 'http://127.0.0.1:8000/api/students';
+  
 
-  constructor(private http: HttpClient) {}
+
+
+  constructor(private http: HttpClient) { }
 
   getStudents(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
@@ -31,6 +34,38 @@ export class StudentService {
   }
 
   login(credentials: { email: string, phone: string }): Observable<any> {
-    return this.http.post<any>(this.apiUrl, credentials);
+    return this.http.post<any>(`${this.apiUrl}/login`, credentials);
   }
+
+  assignSala(id: number, salaId: number): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/${id}/assign-sala`, { salaId });
+  }
+
+  uploadProfilePicture(id: number, formData: FormData): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/${id}/profile-picture`, formData);
+  }
+  
+  // Método para subir una imagen en base64 como perfil del estudiante
+  uploadCapturedProfilePicture(id: number, base64Image: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/${id}/profile-picture`, { profile_picture: base64Image });
+  }
+
+
+  // Nuevo método para guardar el token en localStorage
+  saveToken(token: string): void {
+    localStorage.setItem('token', token);
+  }
+
+  verifyAccount(emailOrPhone: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/verify-account`, { email_or_phone: emailOrPhone });
+  }
+  
+  
+  updatePassword(id: number, newPassword: string, confirmPassword: string): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/${id}/update-password`, {
+      new_password: newPassword,
+      new_password_confirmation: confirmPassword
+    });
+  }
+  
 }
