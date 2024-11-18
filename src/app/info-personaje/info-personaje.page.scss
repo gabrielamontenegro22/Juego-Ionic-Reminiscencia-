@@ -37,22 +37,29 @@ ion-content {
 }
 
 /* Imagen personaje */
+/* Contenedor de la imagen del personaje */
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/Ellipse 2.png');
-  background-size: 80%;
+  background-image: url('/assets/Ellipse 2.png'); /* Fondo decorativo, opcional */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  border-radius: 50%; /* Hacer el contenedor redondeado */
+  width: 150px; /* Ancho del contenedor */
+  height: 150px; /* Alto del contenedor */
+  overflow: hidden; /* Asegura que la imagen no salga del contenedor */
 }
 
+/* Imagen del personaje */
 .imagen-person {
-  width: 50%; 
-  height: auto;
-  max-width: 50%; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+  border-radius: 50%; /* Hace la imagen completamente redondeada */
 }
+
 
 
 
@@ -344,6 +351,7 @@ ion-list {
   font-size: 14px;
   font-weight: bold;
   margin: 0;
+  color: #000;
 }
 
 .friend-level {

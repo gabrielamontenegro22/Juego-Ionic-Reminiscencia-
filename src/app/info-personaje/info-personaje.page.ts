@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild  } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StudentService } from '../servicios/student.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { StudentService } from '../servicios/student.service';
 })
 export class InfoPersonajePage implements OnInit {
   @ViewChild('fileInput') fileInput: any;
-  imageSrc: string = 'assets/personajes/image.webp'; 
+  imageSrc: string = 'assets/personajes/image.webp';
   // Método para seleccionar archivo (local)
   selectImage() {
     this.fileInput.nativeElement.click();
@@ -64,7 +64,40 @@ export class InfoPersonajePage implements OnInit {
 
   ngOnInit() {
     this.loadFriends(); // Cargar amigos al iniciar
+    this.loadPlayerData();
   }
+
+
+  loadPlayerData() {
+    const studentData = localStorage.getItem('student');
+    const profileImage = localStorage.getItem('CapacitorStorage.profileImage');
+
+    if (profileImage) {
+      this.imageSrc = profileImage; // Usar la imagen en base64 si está disponible
+    } else if (studentData) {
+      const student = JSON.parse(studentData);
+      this.imageSrc = student.profile_picture
+        ? student.profile_picture
+        : 'assets/default-profile.png';
+    } else {
+      this.imageSrc = 'assets/default-profile.png';
+    }
+  }
+
+  // Método para obtener los valores actuales
+  getAttributes() {
+    const attributes = {
+      fuerza: this.fuerza,
+      inteligencia: this.inteligencia,
+      destreza: this.destreza,
+      sabiduria: this.sabiduria,
+      construccion: this.construccion,
+      apariencia: this.apariencia,
+    };
+    console.log(attributes);
+    return attributes;
+  }
+
 
   // Métodos para cargar amigos desde el servicio
   loadFriends() {
