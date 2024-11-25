@@ -27,7 +27,7 @@ export class Restablecer2Page implements OnInit {
 
   async updatePassword() {
     if (!this.newPassword || !this.confirmPassword) {
-      await this.showAlert('Error', 'Por favor, completa ambos campos de contraseña');
+      await this.showAlert('Error', 'Por favor, completa ambos campos de contraseña'); 
       return;
     }
 
@@ -54,7 +54,7 @@ export class Restablecer2Page implements OnInit {
     });
   }
 
-  async showAlert(header: string, message: string) {
+  async showAlert(header: string, message: string) {  // se encarga de mostrar una alerta en la interfaz de usuario.
     const alert = await this.alertController.create({
       header: header,
       message: message,
@@ -62,7 +62,7 @@ export class Restablecer2Page implements OnInit {
     });
 
     await alert.present();
-  }
+  }// Muestra la alerta en la pantalla y espera a que se presente
 
   cancel() {
     this.router.navigate(['/inicio']);

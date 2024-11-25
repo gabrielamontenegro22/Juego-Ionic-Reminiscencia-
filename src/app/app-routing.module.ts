@@ -30,12 +30,10 @@ const routes: Routes = [
   {
     path: 'elige-rol',
     loadChildren: () => import('./elige-rol/elige-rol.module').then( m => m.EligeRolPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'salas',
     loadChildren: () => import('./salas/salas.module').then( m => m.SalasPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'captura-foto',
@@ -44,7 +42,6 @@ const routes: Routes = [
   {
     path: 'info-personaje',
     loadChildren: () => import('./info-personaje/info-personaje.module').then( m => m.InfoPersonajePageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'prueba',
@@ -85,27 +82,29 @@ const routes: Routes = [
   {
     path: 'gestion-salas',
     loadChildren: () => import('./gestion-sala/gestion-sala.module').then(m => m.GestionSalaPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'habilidades',
     loadChildren: () => import('./habilidadesgeneral/habilidadesgeneral.module').then( m => m.HabilidadesgeneralPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'reestablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'reestablecer2',
     loadChildren: () => import('./restablecer2/restablecer2.module').then( m => m.Restablecer2PageModule)
-    path: 'habilidadesgeneral',
+  },
+    {path: 'habilidadesgeneral',
     loadChildren: () => import('./habilidadesgeneral/habilidadesgeneral.module').then( m => m.HabilidadesgeneralPageModule)
   },
   {
     path: 'asignarsala',
     loadChildren: () => import('./asignarsala/asignarsala.module').then( m => m.AsignarsalaPageModule)
+  },
+  {
+    path: 'tomar-fotos',
+    loadChildren: () => import('./tomar-fotos/tomar-fotos.module').then( m => m.TomarFotosPageModule)
   }
 ];
 
